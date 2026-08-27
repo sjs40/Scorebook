@@ -74,6 +74,16 @@
     }
   }
 
+  function composeDek(issue) {
+    var dek = issue.dek || "";
+    if (issue.playOfTheNight) {
+      var clause = "Play of the night: " + issue.playOfTheNight + ".";
+      if (!dek) return clause;
+      return clause + " " + dek;
+    }
+    return dek;
+  }
+
   function renderLatest() {
     if (!latestEl || !issues.length) return;
 
@@ -86,7 +96,7 @@
       '<p class="latest-label">Latest issue</p>' +
       '<a href="/' + latest.date + '/">' +
       '<h3>' + latest.title + '</h3>' +
-      '<p>' + latest.dek + '</p>' +
+      '<p>' + composeDek(latest) + '</p>' +
       '</a>';
   }
 
