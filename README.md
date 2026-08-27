@@ -36,9 +36,11 @@ Votes are real counts stored in Cloudflare KV via a Pages Function. The browser 
 
 ### Cloudflare setup (once per project)
 
-1. Create a KV namespace: `npx wrangler kv namespace create POTN_VOTES` (and `--preview` for preview).
-2. Paste the returned ids into `wrangler.toml`.
-3. In the Cloudflare Pages project **Settings → Functions → KV namespace bindings**, bind `POTN_VOTES` to the same namespace for production and preview.
+1. In the Cloudflare dashboard, create a KV namespace named **POTN_VOTES** (Workers & Pages → KV, or `npx wrangler kv namespace create POTN_VOTES`). Do not commit namespace ids to the repo.
+2. On the **scorebook** Pages project, open **Settings → Functions → KV namespace bindings**.
+3. Add binding **Variable name** `POTN_VOTES` → your **POTN_VOTES** namespace for **Production** and **Preview** environments.
+
+That dashboard binding is what supplies `env.POTN_VOTES` to `functions/api/potn/`. Without it, the Function deploys but vote POSTs return `kv_unavailable`.
 
 ### Local preview (requires the function)
 

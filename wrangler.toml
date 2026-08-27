@@ -1,13 +1,8 @@
-# Cloudflare Pages + KV for Play of the night vote counts (experiment branch).
-# Create the namespace once, then paste ids from:
-#   npx wrangler kv namespace create POTN_VOTES
-#   npx wrangler kv namespace create POTN_VOTES --preview
+# Cloudflare Pages project metadata (experiment branch).
+# KV binding POTN_VOTES is configured in the Cloudflare dashboard:
+# Pages → scorebook → Settings → Functions → KV namespace bindings.
+# Do not add [[kv_namespaces]] ids here — Pages deploy rejects placeholder values.
 
 name = "scorebook"
 compatibility_date = "2024-08-01"
 pages_build_output_dir = "."
-
-[[kv_namespaces]]
-binding = "POTN_VOTES"
-id = "REPLACE_WITH_PRODUCTION_KV_NAMESPACE_ID"
-preview_id = "REPLACE_WITH_PREVIEW_KV_NAMESPACE_ID"
