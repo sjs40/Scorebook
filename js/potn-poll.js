@@ -113,10 +113,25 @@
       "</p>";
   }
 
+  function sumCounts(counts) {
+    var total = 0;
+    var parsed = labelsFromForm();
+    parsed.order.forEach(function (key) {
+      total += counts[key] || 0;
+    });
+    return total;
+  }
+
   function refresh(mine, voted) {
     return fetchTotals()
       .then(function (data) {
-        paint(data.counts || {}, mine || null, { voted: !!voted });
+        var counts = data.counts || {};
+        if (!voted && !mine && sumCounts(counts) === 0) {
+          results.hidden = true;
+          results.innerHTML = "";
+          return;
+        }
+        paint(counts, mine || null, { voted: !!voted });
       })
       .catch(function () {
         showError("Could not load vote totals. Try again in a moment.");
