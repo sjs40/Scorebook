@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scorebook</title>
+<link rel="canonical" href="https://getscorebook.com/" />
+<link rel="stylesheet" href="/css/site.css" />
+<meta property="og:title" content="Scorebook" />
+<meta property="og:description" content="The games you didn't watch. A daily recap of Major League Baseball." />
+<meta property="og:url" content="https://getscorebook.com/" />
+<meta property="og:type" content="website" />
+</head>
+<body>
+<header class="site">
+  <a class="site-brand" href="/">
+    <div class="cell"><span>SB</span></div>
+    <div><span class="site-name">Scorebook</span>
+      <span class="site-tag">The games you didn&rsquo;t watch.</span></div>
+  </a>
+  <a class="sub" href="#">Subscribe</a>
+</header>
+<main class="page">
+  <p class="kicker">Archive</p>
+  <h1>Scorebook</h1>
+  <p class="dek">Pick a day.</p>
+  <p class="by">Scorebook &middot; a daily recap of the games you didn&rsquo;t watch</p>
+
+  <h2>Issues</h2>
+  <div class="cal-wrap">
+    <div class="cal-head">
+      <span class="cal-month" id="cal-month"></span>
+      <div class="cal-nav">
+        <button type="button" id="cal-prev">Prev</button>
+        <button type="button" id="cal-next">Next</button>
+      </div>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+  </div>
+
+  <div class="latest" id="latest-issue"></div>
+</main>
+<script src="/js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scorebook - Wednesday, August 26</title>
+<link rel="canonical" href="https://getscorebook.com/2026-08-26/" />
+<style>
+  :root {
+    --paper: #F3EEE3; --ink-blue: #2A5A9A; --cover: #1E3F73;
+    --line: #7A9AC0; --shade: #E4EBF5; --graphite: #1A2744; --muted: #5C6B80; --heat: #1E3F73;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #e8e2d6; color: var(--graphite);
+    font-family: Georgia, "Times New Roman", serif; }
+  .site { background: var(--cover); color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px; position: sticky; top: 0; z-index: 2; }
+  .site-brand { display: flex; align-items: center; gap: 12px; }
+  .cell { width: 36px; height: 36px; border: 2px solid var(--paper); position: relative; flex: 0 0 36px; }
+  .cell::after { content: ""; position: absolute; inset: 3px; border: 1.5px solid var(--paper); }
+  .cell span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 13px; }
+  .site-name { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 18px; }
+  .site-tag { font-style: italic; font-size: 13px; color: #c5d4e6; margin-left: 4px; }
+  .sub { font-family: Arial, sans-serif; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+    border: 1px solid var(--paper); padding: 8px 14px; color: var(--paper); text-decoration: none; }
+  .site-brand { text-decoration: none; color: inherit; }
+  .site-nav { display: flex; align-items: center; gap: 16px; }
+  .site-home { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--paper); text-decoration: none; }
+  .site-home:hover { text-decoration: underline; }
+  .page { max-width: 740px; margin: 0 auto; background: var(--paper); padding: 40px 40px 72px; }
+  .kicker { font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-blue); font-weight: 700; margin: 0 0 8px; }
+  h1 { font-size: 32px; margin: 0 0 10px; color: var(--cover); letter-spacing: -0.03em; }
+  .dek { font-size: 20px; line-height: 1.4; color: #334; margin: 0 0 10px; }
+  .by { font-family: Arial, sans-serif; font-size: 12px; color: var(--muted);
+    border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 8px; }
+  h2 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-blue); border-bottom: 2px solid var(--ink-blue);
+    padding-bottom: 6px; margin: 36px 0 14px; }
+  p { font-size: 17px; line-height: 1.55; margin: 0 0 12px; }
+  .cap { font-family: Georgia, serif; font-style: italic; font-size: 15px; color: #445; margin: 8px 0 22px; }
+  .clip { margin: 0 0 4px; }
+  .clip video { width: 100%; display: block; background: #111; aspect-ratio: 16/9; }
+  .clip figcaption { font-family: Arial, sans-serif; font-size: 11px; color: var(--muted);
+    letter-spacing: 0.04em; margin-top: 6px; }
+  .clip figcaption a { color: var(--ink-blue); }
+  table.lb, table.st { width: 100%; border-collapse: collapse; font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px; font-variant-numeric: tabular-nums; margin: 0 0 18px; }
+  table.lb th, table.st th {
+    background: var(--shade); color: var(--ink-blue); font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; text-align: right; padding: 6px 7px;
+    border-bottom: 2px solid var(--ink-blue); border-top: 2px solid var(--ink-blue); }
+  table.lb th:first-child, table.st th:first-child,
+  table.lb td.name, table.st td.tm { text-align: left; }
+  table.lb td, table.st td { padding: 5px 7px; text-align: right; border-bottom: 1px solid var(--line); }
+  table.lb tr:nth-child(even) td, table.st tr:nth-child(even) td { background: var(--shade); }
+  table.lb td.name, table.st td.tm { color: var(--ink-blue); font-weight: 700; }
+  table.lb td.hi { background: var(--heat) !important; color: var(--paper); font-weight: 700; }
+  table.st tr.cut td { border-bottom: 2px solid var(--cover); }
+  .div { font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--paper); background: var(--ink-blue); padding: 6px 8px; font-weight: 700; }
+  .subn { font-family: Arial, sans-serif; font-size: 12px; color: var(--muted); margin: -6px 0 10px; }
+  .recap { margin: 0 0 22px; }
+  .recap p { font-size: 16px; }
+  table.ls { border-collapse: collapse; font-family: Arial, Helvetica, sans-serif;
+    font-variant-numeric: tabular-nums; font-size: 13px; margin: 6px 0 4px; width: auto; }
+  details.game[open] table.ls { width: 100%; }
+  table.ls th, table.ls td {
+    border: 1px solid var(--line); padding: 5px 6px; text-align: center; color: var(--cover); }
+  table.ls th { background: var(--shade); font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; font-weight: 700; color: var(--ink-blue); }
+  table.ls td.tm, table.ls th.tm { text-align: left; font-weight: 700; color: var(--ink-blue); width: 3.2em; }
+  table.ls th.tot, table.ls td.tot { background: var(--shade); font-weight: 700; }
+  table.ls th.rhe, table.ls td.rhe { border-left: 2px solid var(--cover); }
+  table.ls td.hot { background: var(--heat); color: var(--paper); font-weight: 700; }
+  details.game:not([open]) .inn { display: none; }
+  details.game { margin: 0 0 14px; border: 1px solid var(--line); background: #f7f3ea; padding: 10px 12px 8px; }
+  details.game summary { list-style: none; cursor: pointer; }
+  details.game summary::-webkit-details-marker { display: none; }
+  details.game h3 { font-size: 18px; margin: 0 0 2px; color: var(--cover); }
+  .hint { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-blue); float: right; margin-top: 4px; }
+  details.game[open] .hint::after { content: "hide innings"; }
+  details.game:not([open]) .hint::after { content: "innings"; }
+  .wl { font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); margin: 0; clear: both; }
+  .tonight p { margin: 0 0 10px; }
+  .tonight strong { color: var(--ink-blue); }
+  .poll label { display: block; font-family: Arial, Helvetica, sans-serif; font-size: 14px;
+    border: 1px solid var(--line); padding: 10px 12px; margin: 0 0 8px; cursor: pointer; background: #f7f3ea; }
+  .poll label:hover, .poll label:has(input:checked) { border-color: var(--ink-blue); background: var(--shade); }
+  .poll button { font-family: Arial, sans-serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--cover); color: var(--paper); border: 0; padding: 10px 16px; cursor: pointer; }
+  .bar-row { display: grid; grid-template-columns: 1fr 48px; gap: 8px; align-items: center; margin: 0 0 8px;
+    font-family: Arial, sans-serif; font-size: 13px; }
+  .bar { height: 18px; background: var(--shade); border: 1px solid var(--line); }
+  .bar > span { display: block; height: 100%; background: var(--ink-blue); }
+  .foot { font-family: Arial, sans-serif; font-size: 11px; color: var(--muted);
+    margin-top: 36px; border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 640px) {
+    .page { padding: 24px 16px 48px; }
+    h1 { font-size: 26px; }
+  }
+</style>
+<meta property="og:title" content="Scorebook Wednesday August 26" />
+<meta property="og:description" content="A daily recap of Major League Baseball games including highlights, top performers, and league standings." />
+<meta property="og:url" content="https://getscorebook.com/2026-08-26/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://here.now/og/topaz-mirage-32bq.jpg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" />
+<meta name="twitter:image" content="https://here.now/og/topaz-mirage-32bq.jpg" />
+<meta name="twitter:card" content="summary_large_image" /></head>
+<body>
+<header class="site">
+  <a class="site-brand" href="/">
+    <div class="cell"><span>SB</span></div>
+    <div><span class="site-name">Scorebook</span>
+      <span class="site-tag">The games you didn&rsquo;t watch.</span></div>
+  </a>
+  <div class="site-nav">
+    <a class="site-home" href="/">All issues</a>
+    <a class="sub" href="#">Subscribe</a>
+  </div>
+</header>
+<article class="page">
+  <p class="kicker">Wednesday night</p>
+  <h1>Scorebook - Wednesday, August 26</h1>
+  <p class="dek">Cincinnati scores seven in the ninth. Atlanta walks it off. Luzardo, one hit through seven. Arizona blanks Chicago.</p>
+  <p class="by">Scorebook · a daily recap of the games you didn’t watch</p>
+
+  <h2>Must watch</h2>
+<figure class="clip">
+  <video controls playsinline preload="metadata" src="https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/26/77a3b530-da6298fc-aef2e6cf-csvm-diamondgcp-asset_1280x720_59_4000K.mp4"></video>
+  <figcaption><a href="https://www.mlb.com/video/dylan-smith-in-play-run-s-to-eugenio-suarez">Film Room</a> · MLB Film Room stream</figcaption>
+</figure>
+  <p class="cap">Eugenio Suárez, grand slam. Top 9 at Oracle Park. Reds trail 9–3, then they don’t.</p>
+<figure class="clip">
+  <video controls playsinline preload="metadata" src="https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/26/61e0cbfd-ec0a2781-dcf03a69-csvm-diamondgcp-asset_1280x720_59_4000K.mp4"></video>
+  <figcaption><a href="https://www.mlb.com/video/ha-seong-kim-walks-off-the-dodgers">Film Room</a> · MLB Film Room stream</figcaption>
+</figure>
+  <p class="cap">Ha-Seong Kim walks off the Dodgers. Bottom 9, Braves 6–5.</p>
+<figure class="clip">
+  <video controls playsinline preload="metadata" src="https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/26/df87bf7f-9ae3a5a5-48d8846d-csvm-diamondgcp-asset_1280x720_59_4000K.mp4"></video>
+  <figcaption><a href="https://www.mlb.com/video/jesus-luzardo-twirls-nine-in-7-scoreless-innings">Film Room</a> · MLB Film Room stream</figcaption>
+</figure>
+  <p class="cap">Jesús Luzardo: 7.0 IP, 1 H, 0 R, 9 K. Phillies 6, Mariners 0.</p>
+
+  <h2>That’s baseball</h2>
+<figure class="clip">
+  <video controls playsinline preload="metadata" src="https://bdata-producedclips.mlb.com/61850bec-2a3d-492c-b821-7c7d3b8d97b5.mp4"></video>
+  <figcaption><a href="https://www.mlb.com/video/ryan-zeferjahn-in-play-run-s-to-ryan-waldschmidt">Film Room</a> · MLB Film Room stream</figcaption>
+</figure>
+  <p class="cap">Ryan Waldschmidt flies into a sacrifice double play. Lawlar is out at first. Arizona still scores. Cubs lose 2–0.</p>
+
+  <h2>One inning</h2>
+  <p>Top of the 9th, Oracle Park. Giants lead 9–3. Héctor Rodríguez homers. Suárez hits a grand slam. A sac fly. A single. Seven runs. Cincinnati wins 10–9.</p>
+<figure class="clip">
+  <video controls playsinline preload="metadata" src="https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/26/9f8c3ae8-8839486f-6894b114-csvm-diamondgcp-asset_1280x720_59_4000K.mp4"></video>
+  <figcaption><a href="https://www.mlb.com/video/reds-score-seven-runs-in-the-9th">Film Room</a> · MLB Film Room stream</figcaption>
+</figure>
+  <p class="cap">The ninth, start to finish.</p>
+
+  <h2>Top performers</h2>
+  <p class="subn">Pitchers · Bill James game score, 5+ IP</p>
+  <table class="lb">
+    <thead><tr><th>#</th><th>Name</th><th>Tm</th><th>GS</th><th>IP</th><th>H</th><th>ER</th><th>BB</th><th>K</th><th>Opp</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="name">Jesús Luzardo</td><td>PHI</td><td class="hi">81</td><td>7.0</td><td>1</td><td>0</td><td>3</td><td>9</td><td>SEA</td></tr>
+      <tr><td>2</td><td class="name">Eduardo Rodriguez</td><td>ARI</td><td>79</td><td>7.0</td><td>2</td><td>0</td><td>3</td><td>9</td><td>CHC</td></tr>
+      <tr><td>3</td><td class="name">Freddy Peralta</td><td>TBR</td><td>72</td><td>6.0</td><td>2</td><td>0</td><td>0</td><td>4</td><td>DET</td></tr>
+      <tr><td>4</td><td class="name">Tanner Gordon</td><td>COL</td><td>66</td><td>7.0</td><td>6</td><td>1</td><td>0</td><td>5</td><td>WSN</td></tr>
+    </tbody>
+  </table>
+  <p class="subn">Hitters · ranked by total bases, then HR, RBI, H, SB</p>
+  <table class="lb">
+    <thead><tr><th>#</th><th>Name</th><th>Tm</th><th>TB</th><th>AB</th><th>H</th><th>XBH</th><th>HR</th><th>RBI</th><th>SB</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="name">Héctor Rodríguez</td><td>CIN</td><td class="hi">9</td><td>6</td><td>3</td><td>2</td><td>2</td><td>2</td><td>0</td></tr>
+      <tr><td>2</td><td class="name">Tristan Peters</td><td>CHW</td><td>7</td><td>4</td><td>3</td><td>2</td><td>1</td><td>2</td><td>0</td></tr>
+      <tr><td>3</td><td class="name">Andrés Chaparro</td><td>WSN</td><td>7</td><td>4</td><td>3</td><td>2</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>4</td><td class="name">Sean Murphy</td><td>ATL</td><td>7</td><td>4</td><td>3</td><td>2</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>5</td><td class="name">Kyle Schwarber</td><td>PHI</td><td>6</td><td>5</td><td>2</td><td>2</td><td>1</td><td>3</td><td>0</td></tr>
+      <tr><td>6</td><td class="name">Tommy Edman</td><td>LAD</td><td>6</td><td>4</td><td>2</td><td>2</td><td>1</td><td>3</td><td>0</td></tr>
+      <tr><td>7</td><td class="name">Luis García Jr.</td><td>NYY</td><td>6</td><td>5</td><td>3</td><td>1</td><td>1</td><td>2</td><td>0</td></tr>
+      <tr><td>8</td><td class="name">Bryce Harper</td><td>PHI</td><td>6</td><td>4</td><td>2</td><td>2</td><td>1</td><td>2</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="cap">Pitchers by Bill James game score, 5+ IP. Hitters by total bases. XBH is 2B + 3B + HR.</p>
+
+  <h2>The race</h2>
+  <div class="recap">
+    <p class="subn">Last night</p>
+    <p>Cleveland wins a seventh straight and holds the last American League wild card. Boston loses; Tampa Bay’s lead in the East is six. The Yankees stay eight games up on the last wild-card spot.</p>
+    <p>In the National League, San Diego and Arizona both win. The Padres keep the last wild card. Arizona is one game out. The Cubs lose again, 6.5 back of Milwaukee. Philadelphia blanks Seattle.</p>
+    <p class="subn">Since August 13</p>
+    <p>Cleveland is 9-3. Philadelphia is 9-2. The Cubs are 5-7. St. Louis has lost five in a row. Detroit is 2-10.</p>
+  </div>
+<p class="subn">Standings through Wednesday. L10 is the last ten games. RD is run differential. The heavy rule is the wild-card cut.</p>
+<div class="div">AL East</div><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">TBR</td><td>79</td><td>54</td><td>--</td><td>--</td><td>W1</td><td>5-5</td><td>+47</td></tr>
+<tr><td class="tm">NYY</td><td>75</td><td>57</td><td>3.5</td><td>+8.0</td><td>W1</td><td>7-3</td><td>+104</td></tr>
+<tr><td class="tm">BOS</td><td>73</td><td>60</td><td>6.0</td><td>+5.5</td><td>L1</td><td>7-3</td><td>+101</td></tr>
+<tr><td class="tm">BAL</td><td>65</td><td>68</td><td>14.0</td><td>2.5</td><td>W2</td><td>5-5</td><td>-22</td></tr>
+<tr><td class="tm">TOR</td><td>65</td><td>69</td><td>14.5</td><td>3.0</td><td>W1</td><td>5-5</td><td>-54</td></tr></tbody></table>
+<div class="div">AL Central</div><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">CHW</td><td>70</td><td>63</td><td>--</td><td>--</td><td>W2</td><td>5-5</td><td>+44</td></tr>
+<tr><td class="tm">CLE</td><td>68</td><td>66</td><td>2.5</td><td>--</td><td>W7</td><td>8-2</td><td>-4</td></tr>
+<tr><td class="tm">MIN</td><td>64</td><td>70</td><td>6.5</td><td>4.0</td><td>L2</td><td>4-6</td><td>-56</td></tr>
+<tr><td class="tm">DET</td><td>62</td><td>71</td><td>8.0</td><td>5.5</td><td>L1</td><td>2-8</td><td>+70</td></tr>
+<tr><td class="tm">KCR</td><td>59</td><td>75</td><td>11.5</td><td>9.0</td><td>L1</td><td>9-1</td><td>-92</td></tr></tbody></table>
+<div class="div">AL West</div><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">HOU</td><td>66</td><td>67</td><td>--</td><td>--</td><td>L1</td><td>3-7</td><td>-48</td></tr>
+<tr><td class="tm">TEX</td><td>66</td><td>68</td><td>0.5</td><td>2.0</td><td>L2</td><td>5-5</td><td>-47</td></tr>
+<tr><td class="tm">SEA</td><td>64</td><td>70</td><td>2.5</td><td>4.0</td><td>L1</td><td>6-4</td><td>-57</td></tr>
+<tr><td class="tm">ATH</td><td>53</td><td>81</td><td>13.5</td><td>15.0</td><td>W2</td><td>4-6</td><td>-185</td></tr>
+<tr><td class="tm">LAA</td><td>52</td><td>82</td><td>14.5</td><td>16.0</td><td>L4</td><td>3-7</td><td>-75</td></tr></tbody></table>
+<div class="div">NL East</div><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">ATL</td><td>78</td><td>55</td><td>--</td><td>--</td><td>W3</td><td>5-5</td><td>+112</td></tr>
+<tr><td class="tm">PHI</td><td>74</td><td>60</td><td>4.5</td><td>+2.0</td><td>W1</td><td>8-2</td><td>+23</td></tr>
+<tr><td class="tm">MIA</td><td>68</td><td>66</td><td>10.5</td><td>4.0</td><td>W1</td><td>5-5</td><td>+19</td></tr>
+<tr><td class="tm">WSN</td><td>62</td><td>73</td><td>17.0</td><td>10.5</td><td>L2</td><td>2-8</td><td>+6</td></tr>
+<tr><td class="tm">NYM</td><td>60</td><td>73</td><td>18.0</td><td>11.5</td><td>L1</td><td>6-4</td><td>-46</td></tr></tbody></table>
+<div class="div">NL Central</div><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">MIL</td><td>82</td><td>51</td><td>--</td><td>--</td><td>W1</td><td>7-3</td><td>+167</td></tr>
+<tr><td class="tm">CHC</td><td>76</td><td>58</td><td>6.5</td><td>+4.0</td><td>L2</td><td>4-6</td><td>+119</td></tr>
+<tr><td class="tm">STL</td><td>66</td><td>68</td><td>16.5</td><td>6.0</td><td>L5</td><td>3-7</td><td>-15</td></tr>
+<tr><td class="tm">PIT</td><td>65</td><td>70</td><td>18.0</td><td>7.5</td><td>L1</td><td>5-5</td><td>+24</td></tr>
+<tr><td class="tm">CIN</td><td>63</td><td>71</td><td>19.5</td><td>9.0</td><td>W1</td><td>4-6</td><td>-100</td></tr></tbody></table>
+<div class="div">NL West</div><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">LAD</td><td>80</td><td>53</td><td>--</td><td>--</td><td>L2</td><td>6-4</td><td>+149</td></tr>
+<tr><td class="tm">SDP</td><td>72</td><td>62</td><td>8.5</td><td>--</td><td>W1</td><td>6-4</td><td>+17</td></tr>
+<tr><td class="tm">ARI</td><td>71</td><td>63</td><td>9.5</td><td>1.0</td><td>W2</td><td>5-5</td><td>+5</td></tr>
+<tr><td class="tm">SFG</td><td>54</td><td>79</td><td>26.0</td><td>17.5</td><td>L1</td><td>3-7</td><td>-74</td></tr>
+<tr><td class="tm">COL</td><td>52</td><td>81</td><td>28.0</td><td>19.5</td><td>W2</td><td>3-7</td><td>-132</td></tr></tbody></table>
+<div class="div">AL Wild Card</div>
+<table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">NYY</td><td>75</td><td>57</td><td>+8.0</td><td>W1</td><td>7-3</td><td>+104</td></tr>
+<tr><td class="tm">BOS</td><td>73</td><td>60</td><td>+5.5</td><td>L1</td><td>7-3</td><td>+101</td></tr>
+<tr class="cut"><td class="tm">CLE</td><td>68</td><td>66</td><td>--</td><td>W7</td><td>8-2</td><td>-4</td></tr>
+<tr><td class="tm">TEX</td><td>66</td><td>68</td><td>2.0</td><td>L2</td><td>5-5</td><td>-47</td></tr>
+<tr><td class="tm">BAL</td><td>65</td><td>68</td><td>2.5</td><td>W2</td><td>5-5</td><td>-22</td></tr>
+<tr><td class="tm">TOR</td><td>65</td><td>69</td><td>3.0</td><td>W1</td><td>5-5</td><td>-54</td></tr></tbody></table>
+<div class="div">NL Wild Card</div>
+<table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">CHC</td><td>76</td><td>58</td><td>+4.0</td><td>L2</td><td>4-6</td><td>+119</td></tr>
+<tr><td class="tm">PHI</td><td>74</td><td>60</td><td>+2.0</td><td>W1</td><td>8-2</td><td>+23</td></tr>
+<tr class="cut"><td class="tm">SDP</td><td>72</td><td>62</td><td>--</td><td>W1</td><td>6-4</td><td>+17</td></tr>
+<tr><td class="tm">ARI</td><td>71</td><td>63</td><td>1.0</td><td>W2</td><td>5-5</td><td>+5</td></tr>
+<tr><td class="tm">MIA</td><td>68</td><td>66</td><td>4.0</td><td>W1</td><td>5-5</td><td>+19</td></tr>
+<tr><td class="tm">STL</td><td>66</td><td>68</td><td>6.0</td><td>L5</td><td>3-7</td><td>-15</td></tr></tbody></table>
+<h2>The games</h2>
+<p class="subn">Team, runs, hits, errors. Tap a box and the innings fill in.</p>
+<details class="game"><summary><span class="hint"></span><h3>Reds 10, Giants 9</h3><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">CIN</td><td class="inn">0</td><td class="inn">1</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">1</td><td class="inn">0</td><td class="inn hot">7</td><td class="tot rhe">10</td><td class="tot">15</td><td class="tot">0</td></tr><tr><td class="tm">SFG</td><td class="inn">0</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="inn">2</td><td class="inn">2</td><td class="inn">0</td><td class="inn">3</td><td class="inn">0</td><td class="tot rhe">9</td><td class="tot">12</td><td class="tot">2</td></tr></table><p class="wl">W Santillan · L Smith · S Pagán</p></summary></details>
+<details class="game"><summary><span class="hint"></span><h3>Braves 6, Dodgers 5</h3><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">LAD</td><td class="inn">0</td><td class="inn">1</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">5</td><td class="tot">10</td><td class="tot">0</td></tr><tr><td class="tm">ATL</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn">3</td><td class="inn">0</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn hot">1</td><td class="tot rhe">6</td><td class="tot">14</td><td class="tot">0</td></tr></table><p class="wl">W Mederos · L Scott</p></summary></details>
+<details class="game"><summary><span class="hint"></span><h3>Phillies 6, Mariners 0</h3><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">PHI</td><td class="inn">2</td><td class="inn hot">4</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">6</td><td class="tot">10</td><td class="tot">0</td></tr><tr><td class="tm">SEA</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">0</td><td class="tot">2</td><td class="tot">0</td></tr></table><p class="wl">W Luzardo · L Woo</p></summary></details>
+<details class="game"><summary><span class="hint"></span><h3>Diamondbacks 2, Cubs 0</h3><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">CHC</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">0</td><td class="tot">2</td><td class="tot">0</td></tr><tr><td class="tm">ARI</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn hot">1</td><td class="inn">0</td><td class="inn">1</td><td class="inn">—</td><td class="tot rhe">2</td><td class="tot">6</td><td class="tot">0</td></tr></table><p class="wl">W Rodriguez · L Boyd · S Morillo</p></summary></details>
+
+  <h2>Tonight</h2>
+  <div class="tonight">
+    <p><strong>Yamamoto vs. Sale</strong> — Dodgers at Braves, 7:15 ET. Last night was 6–5.</p>
+    <p><strong>Wesneski vs. Cole</strong> — Astros at Yankees, 7:05 ET. Houston leads the West by half a game.</p>
+    <p>Cubs are off. Also: COL @ WSH 1:05 · BAL @ STL 2:15 · KC @ TOR 7:07 · MIL @ NYM 7:10 · ARI @ SF 9:45.</p>
+  </div>
+
+  <h2>Play of the night</h2>
+  <p class="subn">The three Must watch clips, or something else.</p>
+  <div class="poll" id="potn">
+    <form id="potn-form">
+      <label><input type="radio" name="play" value="suarez" required> Eugenio Suárez, grand slam</label>
+      <label><input type="radio" name="play" value="kim"> Ha-Seong Kim walk-off</label>
+      <label><input type="radio" name="play" value="luzardo"> Jesús Luzardo, 9 Ks</label>
+      <label><input type="radio" name="play" value="other"> Something else</label>
+      <button type="submit">Vote</button>
+    </form>
+    <div id="potn-results" hidden></div>
+  </div>
+  <p class="foot">Clips stream from MLB Film Room. We do not rehost the files. Pitchers by game score (5+ IP). Hitters by total bases.</p>
+</article>
+<script>
+(function () {
+  const KEY = "scorebook-potn-2026-08-26";
+  const COL = "./.herenow/data/play_of_the_night";
+  const ORDER = ["suarez", "kim", "luzardo", "other"];
+  const LABELS = {
+    suarez: "Eugenio Suárez, grand slam",
+    kim: "Ha-Seong Kim walk-off",
+    luzardo: "Jesús Luzardo, 9 Ks",
+    other: "Something else"
+  };
+  const form = document.getElementById("potn-form");
+  const results = document.getElementById("potn-results");
+
+  async function allVotes() {
+    const counts = { suarez: 0, kim: 0, luzardo: 0, other: 0 };
+    let url = COL + "?limit=100";
+    for (let i = 0; i < 20; i++) {
+      const res = await fetch(url);
+      if (!res.ok) break;
+      const data = await res.json();
+      for (const rec of data.records || []) {
+        const c = rec.choice || (rec.data && rec.data.choice);
+        if (c && counts[c] != null) counts[c] += 1;
+      }
+      if (!data.nextCursor) break;
+      url = COL + "?limit=100&cursor=" + encodeURIComponent(data.nextCursor);
+    }
+    return counts;
+  }
+
+  function paint(counts, mine) {
+    const total = ORDER.reduce((s, k) => s + counts[k], 0) || 1;
+    results.hidden = false;
+    results.innerHTML = ORDER.map(function (k) {
+      const n = counts[k];
+      const pct = Math.round((n / total) * 100);
+      const you = mine === k ? " · your vote" : "";
+      return '<div class="bar-row"><div><div>' + LABELS[k] + you + '</div><div class="bar"><span style="width:' + pct + '%"></span></div></div><div>' + n + '</div></div>';
+    }).join("") + '<p class="subn" style="margin-top:8px">' + (ORDER.reduce((s, k) => s + counts[k], 0)) + " votes</p>";
+  }
+
+  async function show(mine) {
+    try {
+      const counts = await allVotes();
+      if (mine) counts[mine] = (counts[mine] || 0);
+      paint(counts, mine);
+    } catch (e) {
+      results.hidden = false;
+      results.textContent = "Couldn’t load the tally.";
+    }
+  }
+
+  const prior = localStorage.getItem(KEY);
+  if (prior && LABELS[prior]) {
+    form.hidden = true;
+    show(prior);
+  }
+
+  form.addEventListener("submit", async function (ev) {
+    ev.preventDefault();
+    const choice = (new FormData(form)).get("play");
+    if (!choice || !LABELS[choice]) return;
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    try {
+      const res = await fetch(COL, {
+        method: "POST",
+        headers: { "content-type": "application/json", "Idempotency-Key": crypto.randomUUID() },
+        body: JSON.stringify({ choice: choice })
+      });
+      if (!res.ok) throw new Error("vote failed");
+      localStorage.setItem(KEY, choice);
+      form.hidden = true;
+      await show(choice);
+    } catch (e) {
+      btn.disabled = false;
+      results.hidden = false;
+      results.textContent = "Couldn\u2019t submit your vote.";
+    }
+  });
+})();
+</script>
+</body>
+</html>
