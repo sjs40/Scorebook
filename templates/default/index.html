@@ -237,7 +237,7 @@
   <section class="shareable" id="play-of-the-night">
   <h2>Play of the night</h2>
   <p class="subn">The three Must watch clips, or something else.</p>
-  <div class="poll" id="potn">
+  <div class="poll" id="potn" data-potn-issue="YYYY-MM-DD">
     <form id="potn-form">
       <label><input type="radio" name="play" value="suarez" required> Eugenio Suárez, grand slam</label>
       <label><input type="radio" name="play" value="kim"> Ha-Seong Kim walk-off</label>
@@ -761,43 +761,9 @@ Scorebook.wireCards(document);
     if (el) el.scrollIntoView({ block: "start" });
   }
 
-  const KEY = "scorebook-potn-2026-08-26";
-  const ORDER = ["suarez", "kim", "luzardo", "other"];
-  const LABELS = {
-    suarez: "Eugenio Suárez, grand slam",
-    kim: "Ha-Seong Kim walk-off",
-    luzardo: "Jesús Luzardo, 9 Ks",
-    other: "Something else"
-  };
-  const form = document.getElementById("potn-form");
-  const results = document.getElementById("potn-results");
-
-  function paint(mine) {
-    results.hidden = false;
-    results.innerHTML = ORDER.map(function (k) {
-      const picked = mine === k;
-      const pct = picked ? 100 : 0;
-      const you = picked ? " · your vote" : "";
-      return '<div class="bar-row"><div><div>' + LABELS[k] + you + '</div><div class="bar"><span style="width:' + pct + '%"></span></div></div><div>' + (picked ? 1 : 0) + '</div></div>';
-    }).join("") + '<p class="subn" style="margin-top:8px">Thanks for voting.</p>';
-  }
-
-  const prior = localStorage.getItem(KEY);
-  if (prior && LABELS[prior]) {
-    form.hidden = true;
-    paint(prior);
-  }
-
-  form.addEventListener("submit", function (ev) {
-    ev.preventDefault();
-    const choice = (new FormData(form)).get("play");
-    if (!choice || !LABELS[choice]) return;
-    localStorage.setItem(KEY, choice);
-    form.hidden = true;
-    paint(choice);
-  });
 })();
 </script>
+<script src="/js/potn-poll.js"></script>
 <script src="/js/team-preferences-logic.js"></script>
 <script src="/js/team-preferences.js"></script>
 </body>
