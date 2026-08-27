@@ -1,0 +1,135 @@
+/* Favorite-team personalization — reuses Scorebook brand colors */
+
+.site-header-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.sb-team-pick {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: var(--paper, #F3EEE3);
+}
+
+.sb-team-pick label {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sb-team-pick select {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: var(--graphite, #1A2744);
+  background: var(--paper, #F3EEE3);
+  border: 1px solid var(--line, #7A9AC0);
+  padding: 6px 28px 6px 8px;
+  min-height: 36px;
+  max-width: min(220px, 52vw);
+  cursor: pointer;
+  appearance: auto;
+}
+
+.sb-team-pick select:focus {
+  outline: 2px solid var(--ink-blue, #2A5A9A);
+  outline-offset: 1px;
+}
+
+.sb-team-summary {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-blue, #2A5A9A);
+  font-style: italic;
+  margin: 0 0 10px;
+}
+
+.sb-team-summary:empty {
+  display: none;
+}
+
+tr.sb-my-team td.tm::after {
+  content: " ★";
+  font-size: 0.85em;
+  color: var(--cover, #1E3F73);
+}
+
+tr.sb-my-team td {
+  background: var(--shade, #E4EBF5) !important;
+  font-weight: 700;
+}
+
+tr.sb-my-team:nth-child(even) td {
+  background: #d8e3f0 !important;
+}
+
+details.game.sb-my-team {
+  border-color: var(--ink-blue, #2A5A9A);
+  border-width: 2px;
+}
+
+details.game.sb-my-team h3::before {
+  content: "My team · ";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-blue, #2A5A9A);
+  font-weight: 700;
+}
+
+article.upcoming-game.sb-my-team {
+  border-left: 3px solid var(--cover, #1E3F73);
+  padding-left: 10px;
+  margin-left: -13px;
+}
+
+article.upcoming-game.sb-my-team p::before {
+  content: "My team · ";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-blue, #2A5A9A);
+  font-weight: 700;
+}
+
+.sb-team-off {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--ink-blue, #2A5A9A);
+  font-style: italic;
+  margin: 0 0 10px;
+}
+
+details.game.sb-compact {
+  opacity: 0.95;
+}
+
+@media (max-width: 640px) {
+  .site-header-tools {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .sb-team-pick {
+    width: 100%;
+  }
+
+  .sb-team-pick select {
+    flex: 1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .sb-team-pick label {
+    font-size: 11px;
+  }
+}
