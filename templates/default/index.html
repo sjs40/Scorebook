@@ -18,6 +18,7 @@
 <link rel="icon" href="favicon.png" type="image/png" />
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="apple-touch.png" />
+<link rel="stylesheet" href="/css/team-preferences.css" />
 <style>
   :root {
     --paper: #F3EEE3; --ink-blue: #2A5A9A; --cover: #1E3F73;
@@ -210,6 +211,7 @@
   <p class="kicker">Wednesday night</p>
   <h1>Wednesday, August 26</h1>
   <p class="dek">Cincinnati scores seven in the ninth. Atlanta walks it off. Luzardo, one hit through seven. Arizona blanks Chicago.</p>
+  <p class="sb-team-summary" id="sb-team-summary" aria-live="polite"></p>
   <p class="by">Scorebook · a daily recap of the games you didn’t watch</p>
 
   <section class="shareable" id="must-watch">
@@ -331,66 +333,66 @@
       <p class="subn">Standings through Wednesday. L10 is the last ten games. RD is run differential. The heavy rule is the wild-card cut.</p>
       <div class="table-block" data-share-card="al-east.png">
       <div class="div">AL East</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">TBR</td><td>79</td><td>54</td><td>--</td><td>--</td><td>W1</td><td>5-5</td><td>+47</td></tr>
-<tr><td class="tm">NYY</td><td>75</td><td>57</td><td>3.5</td><td>+8.0</td><td>W1</td><td>7-3</td><td>+104</td></tr>
-<tr><td class="tm">BOS</td><td>73</td><td>60</td><td>6.0</td><td>+5.5</td><td>L1</td><td>7-3</td><td>+101</td></tr>
-<tr><td class="tm">BAL</td><td>65</td><td>68</td><td>14.0</td><td>2.5</td><td>W2</td><td>5-5</td><td>-22</td></tr>
-<tr><td class="tm">TOR</td><td>65</td><td>69</td><td>14.5</td><td>3.0</td><td>W1</td><td>5-5</td><td>-54</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="TBR"><td>79</td><td>54</td><td>--</td><td>--</td><td>W1</td><td>5-5</td><td>+47</td></tr>
+<tr data-team="NYY"><td>75</td><td>57</td><td>3.5</td><td>+8.0</td><td>W1</td><td>7-3</td><td>+104</td></tr>
+<tr data-team="BOS"><td>73</td><td>60</td><td>6.0</td><td>+5.5</td><td>L1</td><td>7-3</td><td>+101</td></tr>
+<tr data-team="BAL"><td>65</td><td>68</td><td>14.0</td><td>2.5</td><td>W2</td><td>5-5</td><td>-22</td></tr>
+<tr data-team="TOR"><td>65</td><td>69</td><td>14.5</td><td>3.0</td><td>W1</td><td>5-5</td><td>-54</td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="al-central.png">
       <div class="div">AL Central</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">CHW</td><td>70</td><td>63</td><td>--</td><td>--</td><td>W2</td><td>5-5</td><td>+44</td></tr>
-<tr><td class="tm">CLE</td><td>68</td><td>66</td><td>2.5</td><td>--</td><td>W7</td><td>8-2</td><td>-4</td></tr>
-<tr><td class="tm">MIN</td><td>64</td><td>70</td><td>6.5</td><td>4.0</td><td>L2</td><td>4-6</td><td>-56</td></tr>
-<tr><td class="tm">DET</td><td>62</td><td>71</td><td>8.0</td><td>5.5</td><td>L1</td><td>2-8</td><td>+70</td></tr>
-<tr><td class="tm">KCR</td><td>59</td><td>75</td><td>11.5</td><td>9.0</td><td>L1</td><td>9-1</td><td>-92</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="CHW"><td>70</td><td>63</td><td>--</td><td>--</td><td>W2</td><td>5-5</td><td>+44</td></tr>
+<tr data-team="CLE"><td>68</td><td>66</td><td>2.5</td><td>--</td><td>W7</td><td>8-2</td><td>-4</td></tr>
+<tr data-team="MIN"><td>64</td><td>70</td><td>6.5</td><td>4.0</td><td>L2</td><td>4-6</td><td>-56</td></tr>
+<tr data-team="DET"><td>62</td><td>71</td><td>8.0</td><td>5.5</td><td>L1</td><td>2-8</td><td>+70</td></tr>
+<tr data-team="KCR"><td>59</td><td>75</td><td>11.5</td><td>9.0</td><td>L1</td><td>9-1</td><td>-92</td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="al-west.png">
       <div class="div">AL West</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">HOU</td><td>66</td><td>67</td><td>--</td><td>--</td><td>L1</td><td>3-7</td><td>-48</td></tr>
-<tr><td class="tm">TEX</td><td>66</td><td>68</td><td>0.5</td><td>2.0</td><td>L2</td><td>5-5</td><td>-47</td></tr>
-<tr><td class="tm">SEA</td><td>64</td><td>70</td><td>2.5</td><td>4.0</td><td>L1</td><td>6-4</td><td>-57</td></tr>
-<tr><td class="tm">ATH</td><td>53</td><td>81</td><td>13.5</td><td>15.0</td><td>W2</td><td>4-6</td><td>-185</td></tr>
-<tr><td class="tm">LAA</td><td>52</td><td>82</td><td>14.5</td><td>16.0</td><td>L4</td><td>3-7</td><td>-75</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="HOU"><td>66</td><td>67</td><td>--</td><td>--</td><td>L1</td><td>3-7</td><td>-48</td></tr>
+<tr data-team="TEX"><td>66</td><td>68</td><td>0.5</td><td>2.0</td><td>L2</td><td>5-5</td><td>-47</td></tr>
+<tr data-team="SEA"><td>64</td><td>70</td><td>2.5</td><td>4.0</td><td>L1</td><td>6-4</td><td>-57</td></tr>
+<tr data-team="ATH"><td>53</td><td>81</td><td>13.5</td><td>15.0</td><td>W2</td><td>4-6</td><td>-185</td></tr>
+<tr data-team="LAA"><td>52</td><td>82</td><td>14.5</td><td>16.0</td><td>L4</td><td>3-7</td><td>-75</td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="al-wc.png">
       <div class="div">AL Wild Card</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">NYY</td><td>75</td><td>57</td><td>+8.0</td><td>W1</td><td>7-3</td><td>+104</td></tr>
-<tr><td class="tm">BOS</td><td>73</td><td>60</td><td>+5.5</td><td>L1</td><td>7-3</td><td>+101</td></tr>
-<tr class="cut"><td class="tm">CLE</td><td>68</td><td>66</td><td>--</td><td>W7</td><td>8-2</td><td>-4</td></tr>
-<tr><td class="tm">TEX</td><td>66</td><td>68</td><td>2.0</td><td>L2</td><td>5-5</td><td>-47</td></tr>
-<tr><td class="tm">BAL</td><td>65</td><td>68</td><td>2.5</td><td>W2</td><td>5-5</td><td>-22</td></tr>
-<tr><td class="tm">TOR</td><td>65</td><td>69</td><td>3.0</td><td>W1</td><td>5-5</td><td>-54</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="NYY"><td>75</td><td>57</td><td>+8.0</td><td>W1</td><td>7-3</td><td>+104</td></tr>
+<tr data-team="BOS"><td>73</td><td>60</td><td>+5.5</td><td>L1</td><td>7-3</td><td>+101</td></tr>
+<tr class="cut" data-team="CLE"><td>68</td><td>66</td><td>--</td><td>W7</td><td>8-2</td><td>-4</td></tr>
+<tr data-team="TEX"><td>66</td><td>68</td><td>2.0</td><td>L2</td><td>5-5</td><td>-47</td></tr>
+<tr data-team="BAL"><td>65</td><td>68</td><td>2.5</td><td>W2</td><td>5-5</td><td>-22</td></tr>
+<tr data-team="TOR"><td>65</td><td>69</td><td>3.0</td><td>W1</td><td>5-5</td><td>-54</td></tr></tbody></table></div>
       </div>
 
       <p class="subn" id="al-odds">Division winner · implied probability · 7d is the week’s move. Heat is a five-point swing.</p>
       <div class="table-block" data-share-card="al-east-odds.png">
       <div class="div">AL East</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr><td class="tm">TBR</td><td>61.2</td><td class="hi">-14</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,3.0 6.4,2.1 11.8,3.0 17.2,4.1 22.5,2.0 27.9,5.3 33.3,10.7 38.7,10.9 44.1,15.1 49.5,16.0 54.8,14.6 60.2,13.4 65.6,13.4 71.0,13.4" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">NYY</td><td>24.0</td><td class="hi">+10</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,14.0 6.4,14.0 11.8,16.0 17.2,13.5 22.5,15.5 27.9,16.0 33.3,7.5 38.7,2.0 44.1,3.0 49.5,3.0 54.8,2.5 60.2,3.0 65.6,5.5 71.0,6.5" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">BOS</td><td>10.7</td><td class="hi">+7</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,12.3 6.4,11.4 11.8,14.6 17.2,16.0 22.5,12.5 27.9,13.5 33.3,15.1 38.7,14.4 44.1,14.4 49.5,11.4 54.8,13.5 60.2,15.3 65.6,8.7 71.0,2.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr data-team="TBR"><td>61.2</td><td class="hi">-14</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,3.0 6.4,2.1 11.8,3.0 17.2,4.1 22.5,2.0 27.9,5.3 33.3,10.7 38.7,10.9 44.1,15.1 49.5,16.0 54.8,14.6 60.2,13.4 65.6,13.4 71.0,13.4" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="NYY"><td>24.0</td><td class="hi">+10</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,14.0 6.4,14.0 11.8,16.0 17.2,13.5 22.5,15.5 27.9,16.0 33.3,7.5 38.7,2.0 44.1,3.0 49.5,3.0 54.8,2.5 60.2,3.0 65.6,5.5 71.0,6.5" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="BOS"><td>10.7</td><td class="hi">+7</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,12.3 6.4,11.4 11.8,14.6 17.2,16.0 22.5,12.5 27.9,13.5 33.3,15.1 38.7,14.4 44.1,14.4 49.5,11.4 54.8,13.5 60.2,15.3 65.6,8.7 71.0,2.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="al-central-odds.png">
       <div class="div">AL Central</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr><td class="tm">CHW</td><td>60.6</td><td>+4</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,11.0 11.8,3.4 17.2,2.0 22.5,6.5 27.9,9.6 33.3,8.6 38.7,6.3 44.1,5.8 49.5,7.0 54.8,6.0 60.2,9.4 65.6,7.7 71.0,7.5" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">CLE</td><td>26.0</td><td class="hi">+15</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,13.5 6.4,12.2 11.8,15.4 17.2,15.7 22.5,16.0 27.9,15.0 33.3,14.1 38.7,12.5 44.1,12.5 49.5,9.3 54.8,6.8 60.2,3.9 65.6,2.0 71.0,5.5" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr data-team="CHW"><td>60.6</td><td>+4</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,11.0 11.8,3.4 17.2,2.0 22.5,6.5 27.9,9.6 33.3,8.6 38.7,6.3 44.1,5.8 49.5,7.0 54.8,6.0 60.2,9.4 65.6,7.7 71.0,7.5" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="CLE"><td>26.0</td><td class="hi">+15</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,13.5 6.4,12.2 11.8,15.4 17.2,15.7 22.5,16.0 27.9,15.0 33.3,14.1 38.7,12.5 44.1,12.5 49.5,9.3 54.8,6.8 60.2,3.9 65.6,2.0 71.0,5.5" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="al-west-odds.png">
       <div class="div">AL West</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr><td class="tm">HOU</td><td>37.0</td><td class="hi">-11</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,8.2 6.4,2.0 11.8,5.7 17.2,5.1 22.5,3.1 27.9,8.3 33.3,4.5 38.7,6.8 44.1,7.4 49.5,10.6 54.8,12.1 60.2,16.0 65.6,13.2 71.0,13.3" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">SEA</td><td>36.5</td><td class="hi">+14</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,14.5 11.8,10.9 17.2,10.1 22.5,11.4 27.9,10.1 33.3,10.4 38.7,10.1 44.1,8.9 49.5,5.3 54.8,8.4 60.2,2.0 65.6,4.0 71.0,3.3" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">TEX</td><td>28.0</td><td>+0</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,7.5 6.4,14.2 11.8,16.0 17.2,15.4 22.5,15.4 27.9,6.3 33.3,14.2 38.7,8.1 44.1,6.9 49.5,7.5 54.8,4.4 60.2,2.0 65.6,5.7 71.0,5.7" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr data-team="HOU"><td>37.0</td><td class="hi">-11</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,8.2 6.4,2.0 11.8,5.7 17.2,5.1 22.5,3.1 27.9,8.3 33.3,4.5 38.7,6.8 44.1,7.4 49.5,10.6 54.8,12.1 60.2,16.0 65.6,13.2 71.0,13.3" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="SEA"><td>36.5</td><td class="hi">+14</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,14.5 11.8,10.9 17.2,10.1 22.5,11.4 27.9,10.1 33.3,10.4 38.7,10.1 44.1,8.9 49.5,5.3 54.8,8.4 60.2,2.0 65.6,4.0 71.0,3.3" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="TEX"><td>28.0</td><td>+0</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,7.5 6.4,14.2 11.8,16.0 17.2,15.4 22.5,15.4 27.9,6.3 33.3,14.2 38.7,8.1 44.1,6.9 49.5,7.5 54.8,4.4 60.2,2.0 65.6,5.7 71.0,5.7" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
       </div>
       <p class="subn">Make the playoffs · same teams as the wild-card table. Heavy rule is the last wild-card cut as the market sees it.</p>
       <div class="table-block" data-share-card="al-wc-odds.png">
       <div class="div">AL Wild Card</div>
       <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Playoff%</th></tr></thead><tbody>
-<tr><td class="tm">NYY</td><td>99.4</td></tr>
-<tr><td class="tm">BOS</td><td>97.2</td></tr>
-<tr class="cut"><td class="tm">CLE</td><td>62.0</td></tr>
-<tr><td class="tm">TEX</td><td>46.5</td></tr>
-<tr><td class="tm">BAL</td><td>21.0</td></tr>
-<tr><td class="tm">TOR</td><td>14.5</td></tr>
+<tr data-team="NYY"><td>99.4</td></tr>
+<tr data-team="BOS"><td>97.2</td></tr>
+<tr class="cut" data-team="CLE"><td>62.0</td></tr>
+<tr data-team="TEX"><td>46.5</td></tr>
+<tr data-team="BAL"><td>21.0</td></tr>
+<tr data-team="TOR"><td>14.5</td></tr>
       </tbody></table></div>
       </div>
       <p class="odds-foot">Polymarket prices, Thursday Aug 27 morning. Not a betting slip.</p>
@@ -406,64 +408,64 @@
       <p class="subn">Standings through Wednesday. L10 is the last ten games. RD is run differential. The heavy rule is the wild-card cut.</p>
       <div class="table-block" data-share-card="nl-east.png">
       <div class="div">NL East</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">ATL</td><td>78</td><td>55</td><td>--</td><td>--</td><td>W3</td><td>5-5</td><td>+112</td></tr>
-<tr><td class="tm">PHI</td><td>74</td><td>60</td><td>4.5</td><td>+2.0</td><td>W1</td><td>8-2</td><td>+23</td></tr>
-<tr><td class="tm">MIA</td><td>68</td><td>66</td><td>10.5</td><td>4.0</td><td>W1</td><td>5-5</td><td>+19</td></tr>
-<tr><td class="tm">WSN</td><td>62</td><td>73</td><td>17.0</td><td>10.5</td><td>L2</td><td>2-8</td><td>+6</td></tr>
-<tr><td class="tm">NYM</td><td>60</td><td>73</td><td>18.0</td><td>11.5</td><td>L1</td><td>6-4</td><td>-46</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="ATL"><td>78</td><td>55</td><td>--</td><td>--</td><td>W3</td><td>5-5</td><td>+112</td></tr>
+<tr data-team="PHI"><td>74</td><td>60</td><td>4.5</td><td>+2.0</td><td>W1</td><td>8-2</td><td>+23</td></tr>
+<tr data-team="MIA"><td>68</td><td>66</td><td>10.5</td><td>4.0</td><td>W1</td><td>5-5</td><td>+19</td></tr>
+<tr data-team="WSN"><td>62</td><td>73</td><td>17.0</td><td>10.5</td><td>L2</td><td>2-8</td><td>+6</td></tr>
+<tr data-team="NYM"><td>60</td><td>73</td><td>18.0</td><td>11.5</td><td>L1</td><td>6-4</td><td>-46</td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="nl-central.png">
       <div class="div">NL Central</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">MIL</td><td>82</td><td>51</td><td>--</td><td>--</td><td>W1</td><td>7-3</td><td>+167</td></tr>
-<tr><td class="tm">CHC</td><td>76</td><td>58</td><td>6.5</td><td>+4.0</td><td>L2</td><td>4-6</td><td>+119</td></tr>
-<tr><td class="tm">STL</td><td>66</td><td>68</td><td>16.5</td><td>6.0</td><td>L5</td><td>3-7</td><td>-15</td></tr>
-<tr><td class="tm">PIT</td><td>65</td><td>70</td><td>18.0</td><td>7.5</td><td>L1</td><td>5-5</td><td>+24</td></tr>
-<tr><td class="tm">CIN</td><td>63</td><td>71</td><td>19.5</td><td>9.0</td><td>W1</td><td>4-6</td><td>-100</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="MIL"><td>82</td><td>51</td><td>--</td><td>--</td><td>W1</td><td>7-3</td><td>+167</td></tr>
+<tr data-team="CHC"><td>76</td><td>58</td><td>6.5</td><td>+4.0</td><td>L2</td><td>4-6</td><td>+119</td></tr>
+<tr data-team="STL"><td>66</td><td>68</td><td>16.5</td><td>6.0</td><td>L5</td><td>3-7</td><td>-15</td></tr>
+<tr data-team="PIT"><td>65</td><td>70</td><td>18.0</td><td>7.5</td><td>L1</td><td>5-5</td><td>+24</td></tr>
+<tr data-team="CIN"><td>63</td><td>71</td><td>19.5</td><td>9.0</td><td>W1</td><td>4-6</td><td>-100</td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="nl-west.png">
       <div class="div">NL West</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">LAD</td><td>80</td><td>53</td><td>--</td><td>--</td><td>L2</td><td>6-4</td><td>+149</td></tr>
-<tr><td class="tm">SDP</td><td>72</td><td>62</td><td>8.5</td><td>--</td><td>W1</td><td>6-4</td><td>+17</td></tr>
-<tr><td class="tm">ARI</td><td>71</td><td>63</td><td>9.5</td><td>1.0</td><td>W2</td><td>5-5</td><td>+5</td></tr>
-<tr><td class="tm">SFG</td><td>54</td><td>79</td><td>26.0</td><td>17.5</td><td>L1</td><td>3-7</td><td>-74</td></tr>
-<tr><td class="tm">COL</td><td>52</td><td>81</td><td>28.0</td><td>19.5</td><td>W2</td><td>3-7</td><td>-132</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>GB</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="LAD"><td>80</td><td>53</td><td>--</td><td>--</td><td>L2</td><td>6-4</td><td>+149</td></tr>
+<tr data-team="SDP"><td>72</td><td>62</td><td>8.5</td><td>--</td><td>W1</td><td>6-4</td><td>+17</td></tr>
+<tr data-team="ARI"><td>71</td><td>63</td><td>9.5</td><td>1.0</td><td>W2</td><td>5-5</td><td>+5</td></tr>
+<tr data-team="SFG"><td>54</td><td>79</td><td>26.0</td><td>17.5</td><td>L1</td><td>3-7</td><td>-74</td></tr>
+<tr data-team="COL"><td>52</td><td>81</td><td>28.0</td><td>19.5</td><td>W2</td><td>3-7</td><td>-132</td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="nl-wc.png">
       <div class="div">NL Wild Card</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr><td class="tm">CHC</td><td>76</td><td>58</td><td>+4.0</td><td>L2</td><td>4-6</td><td>+119</td></tr>
-<tr><td class="tm">PHI</td><td>74</td><td>60</td><td>+2.0</td><td>W1</td><td>8-2</td><td>+23</td></tr>
-<tr class="cut"><td class="tm">SDP</td><td>72</td><td>62</td><td>--</td><td>W1</td><td>6-4</td><td>+17</td></tr>
-<tr><td class="tm">ARI</td><td>71</td><td>63</td><td>1.0</td><td>W2</td><td>5-5</td><td>+5</td></tr>
-<tr><td class="tm">MIA</td><td>68</td><td>66</td><td>4.0</td><td>W1</td><td>5-5</td><td>+19</td></tr>
-<tr><td class="tm">STL</td><td>66</td><td>68</td><td>6.0</td><td>L5</td><td>3-7</td><td>-15</td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>W</th><th>L</th><th>WCGB</th><th>Strk</th><th>L10</th><th>RD</th></tr></thead><tbody><tr data-team="CHC"><td>76</td><td>58</td><td>+4.0</td><td>L2</td><td>4-6</td><td>+119</td></tr>
+<tr data-team="PHI"><td>74</td><td>60</td><td>+2.0</td><td>W1</td><td>8-2</td><td>+23</td></tr>
+<tr class="cut" data-team="SDP"><td>72</td><td>62</td><td>--</td><td>W1</td><td>6-4</td><td>+17</td></tr>
+<tr data-team="ARI"><td>71</td><td>63</td><td>1.0</td><td>W2</td><td>5-5</td><td>+5</td></tr>
+<tr data-team="MIA"><td>68</td><td>66</td><td>4.0</td><td>W1</td><td>5-5</td><td>+19</td></tr>
+<tr data-team="STL"><td>66</td><td>68</td><td>6.0</td><td>L5</td><td>3-7</td><td>-15</td></tr></tbody></table></div>
       </div>
 
       <p class="subn" id="nl-odds">Division winner · implied probability · 7d is the week’s move. Heat is a five-point swing.</p>
       <div class="table-block" data-share-card="nl-east-odds.png">
       <div class="div">NL East</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr><td class="tm">ATL</td><td>76.0</td><td>-4</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,2.0 6.4,2.0 11.8,2.5 17.2,2.5 22.5,4.3 27.9,10.0 33.3,10.6 38.7,10.3 44.1,11.6 49.5,15.5 54.8,16.0 60.2,13.1 65.6,12.1 71.0,11.9" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">PHI</td><td>24.0</td><td class="hi">+8</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,15.5 11.8,14.8 17.2,16.0 22.5,12.9 27.9,9.6 33.3,7.6 38.7,7.7 44.1,5.9 49.5,2.7 54.8,2.0 60.2,5.5 65.6,5.2 71.0,5.9" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr data-team="ATL"><td>76.0</td><td>-4</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,2.0 6.4,2.0 11.8,2.5 17.2,2.5 22.5,4.3 27.9,10.0 33.3,10.6 38.7,10.3 44.1,11.6 49.5,15.5 54.8,16.0 60.2,13.1 65.6,12.1 71.0,11.9" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="PHI"><td>24.0</td><td class="hi">+8</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,15.5 11.8,14.8 17.2,16.0 22.5,12.9 27.9,9.6 33.3,7.6 38.7,7.7 44.1,5.9 49.5,2.7 54.8,2.0 60.2,5.5 65.6,5.2 71.0,5.9" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="nl-central-odds.png">
       <div class="div">NL Central</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr><td class="tm">MIL</td><td>92.0</td><td>+4</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,14.2 6.4,16.0 11.8,11.2 17.2,9.7 22.5,8.9 27.9,4.4 33.3,8.9 38.7,7.1 44.1,5.6 49.5,3.5 54.8,3.2 60.2,3.8 65.6,3.8 71.0,2.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">CHC</td><td>6.5</td><td class="hi">-6</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,4.5 6.4,2.0 11.8,5.8 17.2,8.6 22.5,9.4 27.9,13.0 33.3,10.5 38.7,10.8 44.1,13.8 49.5,15.2 54.8,15.2 60.2,14.4 65.6,14.6 71.0,16.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr data-team="MIL"><td>92.0</td><td>+4</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,14.2 6.4,16.0 11.8,11.2 17.2,9.7 22.5,8.9 27.9,4.4 33.3,8.9 38.7,7.1 44.1,5.6 49.5,3.5 54.8,3.2 60.2,3.8 65.6,3.8 71.0,2.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="CHC"><td>6.5</td><td class="hi">-6</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,4.5 6.4,2.0 11.8,5.8 17.2,8.6 22.5,9.4 27.9,13.0 33.3,10.5 38.7,10.8 44.1,13.8 49.5,15.2 54.8,15.2 60.2,14.4 65.6,14.6 71.0,16.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
       </div>
       <div class="table-block" data-share-card="nl-west-odds.png">
       <div class="div">NL West</div>
-      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr><td class="tm">LAD</td><td>98.5</td><td>0</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,4.7 6.4,3.6 11.8,16.0 17.2,5.5 22.5,2.0 27.9,2.0 33.3,2.4 38.7,3.2 44.1,2.0 49.5,3.6 54.8,3.6 60.2,3.6 65.6,3.6 71.0,3.6" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
-<tr><td class="tm">SDP</td><td>1.0</td><td>0</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,2.0 11.8,16.0 17.2,13.2 22.5,16.0 27.9,16.0 33.3,16.0 38.7,4.8 44.1,16.0 49.5,16.0 54.8,16.0 60.2,16.0 65.6,16.0 71.0,16.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
+      <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Div%</th><th>7d</th><th>14d</th></tr></thead><tbody><tr data-team="LAD"><td>98.5</td><td>0</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,4.7 6.4,3.6 11.8,16.0 17.2,5.5 22.5,2.0 27.9,2.0 33.3,2.4 38.7,3.2 44.1,2.0 49.5,3.6 54.8,3.6 60.2,3.6 65.6,3.6 71.0,3.6" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr>
+<tr data-team="SDP"><td>1.0</td><td>0</td><td class="sp"><svg class="spark" viewBox="0 0 72 18" width="72" height="18" aria-hidden="true"><polyline points="1.0,16.0 6.4,2.0 11.8,16.0 17.2,13.2 22.5,16.0 27.9,16.0 33.3,16.0 38.7,4.8 44.1,16.0 49.5,16.0 54.8,16.0 60.2,16.0 65.6,16.0 71.0,16.0" fill="none" stroke="#2A5A9A" stroke-width="1.4"/></svg></td></tr></tbody></table></div>
       </div>
       <p class="subn">Make the playoffs · same teams as the wild-card table. Heavy rule is the last wild-card cut as the market sees it.</p>
       <div class="table-block" data-share-card="nl-wc-odds.png">
       <div class="div">NL Wild Card</div>
       <div class="scroll"><table class="st"><thead><tr><th>Tm</th><th>Playoff%</th></tr></thead><tbody>
-<tr><td class="tm">CHC</td><td>96.2</td></tr>
-<tr><td class="tm">PHI</td><td>89.5</td></tr>
-<tr class="cut"><td class="tm">SDP</td><td>69.5</td></tr>
-<tr><td class="tm">ARI</td><td>39.0</td></tr>
-<tr><td class="tm">MIA</td><td>6.0</td></tr>
-<tr><td class="tm">STL</td><td>5.5</td></tr>
+<tr data-team="CHC"><td>96.2</td></tr>
+<tr data-team="PHI"><td>89.5</td></tr>
+<tr class="cut" data-team="SDP"><td>69.5</td></tr>
+<tr data-team="ARI"><td>39.0</td></tr>
+<tr data-team="MIA"><td>6.0</td></tr>
+<tr data-team="STL"><td>5.5</td></tr>
       </tbody></table></div>
       </div>
       <p class="odds-foot">Polymarket prices, Thursday Aug 27 morning. Not a betting slip.</p>
@@ -475,19 +477,37 @@
   <section class="shareable" id="the-games">
   <h2>The games</h2>
   <p class="subn">Team, runs, hits, errors. Tap a box and the innings fill in.</p>
-  <details class="game"><summary><span class="hint"></span><h3>Reds 10, Giants 9</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">CIN</td><td class="inn">0</td><td class="inn">1</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">1</td><td class="inn">0</td><td class="inn hot">7</td><td class="tot rhe">10</td><td class="tot">15</td><td class="tot">0</td></tr><tr><td class="tm">SFG</td><td class="inn">0</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="inn">2</td><td class="inn">2</td><td class="inn">0</td><td class="inn">3</td><td class="inn">0</td><td class="tot rhe">9</td><td class="tot">12</td><td class="tot">2</td></tr></table></div><p class="wl">W Santillan · L Smith · S Pagán</p></summary></details>
-  <details class="game"><summary><span class="hint"></span><h3>Braves 6, Dodgers 5</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">LAD</td><td class="inn">0</td><td class="inn">1</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">5</td><td class="tot">10</td><td class="tot">0</td></tr><tr><td class="tm">ATL</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn">3</td><td class="inn">0</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn hot">1</td><td class="tot rhe">6</td><td class="tot">14</td><td class="tot">0</td></tr></table></div><p class="wl">W Mederos · L Scott</p></summary></details>
-  <details class="game"><summary><span class="hint"></span><h3>Phillies 6, Mariners 0</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">PHI</td><td class="inn">2</td><td class="inn hot">4</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">6</td><td class="tot">10</td><td class="tot">0</td></tr><tr><td class="tm">SEA</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">0</td><td class="tot">2</td><td class="tot">0</td></tr></table></div><p class="wl">W Luzardo · L Woo</p></summary></details>
-  <details class="game"><summary><span class="hint"></span><h3>Diamondbacks 2, Cubs 0</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr><td class="tm">CHC</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">0</td><td class="tot">2</td><td class="tot">0</td></tr><tr><td class="tm">ARI</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn hot">1</td><td class="inn">0</td><td class="inn">1</td><td class="inn">—</td><td class="tot rhe">2</td><td class="tot">6</td><td class="tot">0</td></tr></table></div><p class="wl">W Rodriguez · L Boyd · S Morillo</p></summary></details>
+  <details class="game" data-away-team="CIN" data-home-team="SFG"><summary><span class="hint"></span><h3>Reds 10, Giants 9</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr data-team="CIN"><td class="inn">0</td><td class="inn">1</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">1</td><td class="inn">0</td><td class="inn hot">7</td><td class="tot rhe">10</td><td class="tot">15</td><td class="tot">0</td></tr><tr data-team="SFG"><td class="inn">0</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="inn">2</td><td class="inn">2</td><td class="inn">0</td><td class="inn">3</td><td class="inn">0</td><td class="tot rhe">9</td><td class="tot">12</td><td class="tot">2</td></tr></table></div><p class="wl">W Santillan · L Smith · S Pagán</p></summary></details>
+  <details class="game" data-away-team="LAD" data-home-team="ATL"><summary><span class="hint"></span><h3>Braves 6, Dodgers 5</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr data-team="LAD"><td class="inn">0</td><td class="inn">1</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">2</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">5</td><td class="tot">10</td><td class="tot">0</td></tr><tr data-team="ATL"><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn">3</td><td class="inn">0</td><td class="inn">1</td><td class="inn">0</td><td class="inn">0</td><td class="inn hot">1</td><td class="tot rhe">6</td><td class="tot">14</td><td class="tot">0</td></tr></table></div><p class="wl">W Mederos · L Scott</p></summary></details>
+  <details class="game" data-away-team="SEA" data-home-team="PHI"><summary><span class="hint"></span><h3>Phillies 6, Mariners 0</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr data-team="PHI"><td class="inn">2</td><td class="inn hot">4</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">6</td><td class="tot">10</td><td class="tot">0</td></tr><tr data-team="SEA"><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">0</td><td class="tot">2</td><td class="tot">0</td></tr></table></div><p class="wl">W Luzardo · L Woo</p></summary></details>
+  <details class="game" data-away-team="CHC" data-home-team="ARI"><summary><span class="hint"></span><h3>Diamondbacks 2, Cubs 0</h3><div class="scroll"><table class="ls"><tr><th class="tm"></th><th class="inn">1</th><th class="inn">2</th><th class="inn">3</th><th class="inn">4</th><th class="inn">5</th><th class="inn">6</th><th class="inn">7</th><th class="inn">8</th><th class="inn">9</th><th class="tot rhe">R</th><th class="tot">H</th><th class="tot">E</th></tr><tr data-team="CHC"><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="tot rhe">0</td><td class="tot">2</td><td class="tot">0</td></tr><tr data-team="ARI"><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn">0</td><td class="inn hot">1</td><td class="inn">0</td><td class="inn">1</td><td class="inn">—</td><td class="tot rhe">2</td><td class="tot">6</td><td class="tot">0</td></tr></table></div><p class="wl">W Rodriguez · L Boyd · S Morillo</p></summary></details>
 
   </section>
 
   <section class="shareable" id="tonight">
   <h2>Tonight</h2>
-  <div class="tonight">
-    <p><strong>Yamamoto vs. Sale</strong> — Dodgers at Braves, 7:15 ET. Last night was 6–5.</p>
-    <p><strong>Wesneski vs. Cole</strong> — Astros at Yankees, 7:05 ET. Houston leads the West by half a game.</p>
-    <p>Cubs are off. Also: COL @ WSH 1:05 · BAL @ STL 2:15 · KC @ TOR 7:07 · MIL @ NYM 7:10 · ARI @ SF 9:45.</p>
+  <div class="tonight" id="tonight-games">
+    <article class="upcoming-game" data-away-team="LAD" data-home-team="ATL">
+      <p><strong>Yamamoto vs. Sale</strong> — Dodgers at Braves, <time datetime="2026-08-27T23:15:00Z">7:15 ET</time>. Last night was 6–5.</p>
+    </article>
+    <article class="upcoming-game" data-away-team="HOU" data-home-team="NYY">
+      <p><strong>Wesneski vs. Cole</strong> — Astros at Yankees, <time datetime="2026-08-27T23:05:00Z">7:05 ET</time>. Houston leads the West by half a game.</p>
+    </article>
+    <article class="upcoming-game" data-away-team="COL" data-home-team="WSN">
+      <p>Rockies at Nationals, <time datetime="2026-08-27T17:05:00Z">1:05 ET</time>.</p>
+    </article>
+    <article class="upcoming-game" data-away-team="BAL" data-home-team="STL">
+      <p>Orioles at Cardinals, <time datetime="2026-08-27T18:15:00Z">2:15 ET</time>.</p>
+    </article>
+    <article class="upcoming-game" data-away-team="KCR" data-home-team="TOR">
+      <p>Royals at Blue Jays, <time datetime="2026-08-27T23:07:00Z">7:07 ET</time>.</p>
+    </article>
+    <article class="upcoming-game" data-away-team="MIL" data-home-team="NYM">
+      <p>Brewers at Mets, <time datetime="2026-08-27T23:10:00Z">7:10 ET</time>.</p>
+    </article>
+    <article class="upcoming-game" data-away-team="ARI" data-home-team="SFG">
+      <p>Diamondbacks at Giants, <time datetime="2026-08-28T01:45:00Z">9:45 ET</time>.</p>
+    </article>
   </div>
 
   </section>
@@ -501,6 +521,96 @@
 </aside>
 
   <p class="foot">Clips stream from MLB Film Room. We do not rehost the files. Pitchers by game score (5+ IP). Hitters by total bases.</p>
+<script type="application/json" id="scorebook-issue-data">
+{
+  "date": "YYYY-MM-DD",
+  "allGames": [
+    {
+      "away": "CIN",
+      "home": "SFG",
+      "awayScore": 10,
+      "homeScore": 9,
+      "note": "W Santillan \u00b7 L Smith \u00b7 S Pag\u00e1n"
+    },
+    {
+      "away": "LAD",
+      "home": "ATL",
+      "awayScore": 5,
+      "homeScore": 6,
+      "note": "W Mederos \u00b7 L Scott"
+    },
+    {
+      "away": "SEA",
+      "home": "PHI",
+      "awayScore": 0,
+      "homeScore": 6,
+      "note": "W Luzardo \u00b7 L Woo"
+    },
+    {
+      "away": "CHC",
+      "home": "ARI",
+      "awayScore": 0,
+      "homeScore": 2,
+      "note": "W Rodriguez \u00b7 L Boyd \u00b7 S Morillo"
+    }
+  ],
+  "upcomingGames": [
+    {
+      "away": "LAD",
+      "home": "ATL",
+      "pitchers": "Yamamoto vs. Sale",
+      "startTime": "7:15 ET",
+      "startIso": "2026-08-27T23:15:00Z",
+      "note": "Last night was 6\u20135."
+    },
+    {
+      "away": "HOU",
+      "home": "NYY",
+      "pitchers": "Wesneski vs. Cole",
+      "startTime": "7:05 ET",
+      "startIso": "2026-08-27T23:05:00Z",
+      "note": "Houston leads the West by half a game."
+    },
+    {
+      "away": "COL",
+      "home": "WSN",
+      "startTime": "1:05 ET",
+      "startIso": "2026-08-27T17:05:00Z"
+    },
+    {
+      "away": "BAL",
+      "home": "STL",
+      "startTime": "2:15 ET",
+      "startIso": "2026-08-27T18:15:00Z"
+    },
+    {
+      "away": "KCR",
+      "home": "TOR",
+      "startTime": "7:07 ET",
+      "startIso": "2026-08-27T23:07:00Z"
+    },
+    {
+      "away": "MIL",
+      "home": "NYM",
+      "startTime": "7:10 ET",
+      "startIso": "2026-08-27T23:10:00Z"
+    },
+    {
+      "away": "ARI",
+      "home": "SFG",
+      "startTime": "9:45 ET",
+      "startIso": "2026-08-28T01:45:00Z"
+    }
+  ],
+  "offTonight": [
+    "CHC"
+  ],
+  "teamSummaries": {
+    "CHC": "Your Cubs: Chicago was held to two hits in a 2\u20130 loss to Arizona.",
+    "ATL": "Your Braves: Atlanta erased a late deficit and beat Los Angeles 6\u20135 on Ha-Seong Kim's walk-off single."
+  }
+}
+</script>
 </article>
 
 <script>
@@ -688,5 +798,7 @@ Scorebook.wireCards(document);
   });
 })();
 </script>
+<script src="/js/team-preferences-logic.js"></script>
+<script src="/js/team-preferences.js"></script>
 </body>
 </html>
