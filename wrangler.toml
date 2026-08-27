@@ -1,8 +1,12 @@
-# Cloudflare Pages project metadata (experiment branch).
-# KV binding POTN_VOTES is configured in the Cloudflare dashboard:
-# Pages → scorebook → Settings → Functions → KV namespace bindings.
-# Do not add [[kv_namespaces]] ids here — Pages deploy rejects placeholder values.
+# Cloudflare Pages + KV for Play of the night vote counts (experiment branch).
+# Binding name MUST be POTN_VOTES (functions/api/potn/ uses env.POTN_VOTES).
+# Also bind POTN_VOTES → this namespace in Pages dashboard for preview/production.
 
 name = "scorebook"
 compatibility_date = "2024-08-01"
 pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "POTN_VOTES"
+id = "0271d934dc184655ab3b690d8c0a12c0"
+preview_id = "0271d934dc184655ab3b690d8c0a12c0"
