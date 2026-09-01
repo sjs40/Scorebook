@@ -39,11 +39,15 @@ const labels = {
   suarez: "Eugenio Suárez, grand slam",
   kim: "Ha-Seong Kim walk-off",
   luzardo: "Jesús Luzardo, 9 Ks",
+  cubs: "Cubs homer barrage",
+  cowser: "Cowser catch",
+  story: "Story walk-off",
   other: "Something else",
 };
 
 const nomineeOrder = {
   "2026-08-26": ["suarez", "kim", "luzardo", "other"],
+  "2026-08-31": ["cubs", "cowser", "story", "other"],
 };
 
 const payload = await res.json();

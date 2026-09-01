@@ -1,10 +1,13 @@
 {
   "issues": {
     "2026-08-26": {
-      "winner": "suarez",
-      "label": "Eugenio Suárez, grand slam",
-      "finalizedAt": "2026-08-27T08:00:00Z",
-      "note": "Demo winner for branch preview. Replace by running scripts/finalize-potn-winner.mjs against live KV totals before publishing the next issue."
+      "winner": "kim",
+      "label": "Ha-Seong Kim walk-off",
+      "counts": {
+        "kim": 2
+      },
+      "total": 2,
+      "finalizedAt": "2026-09-01T22:08:51.242Z"
     }
   }
 }
