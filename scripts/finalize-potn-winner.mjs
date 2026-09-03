@@ -45,6 +45,9 @@ const labels = {
   williams: "Gavin Williams 13 K",
   slugfest: "Pirates slugfest",
   morales: "Morales debut homer",
+  acuna: "Acuña 200/200 milestone",
+  cease: "Dylan Cease shutout",
+  guerrero: "Guerrero five RBIs",
   other: "Something else",
 };
 
@@ -52,6 +55,7 @@ const nomineeOrder = {
   "2026-08-26": ["suarez", "kim", "luzardo", "other"],
   "2026-08-31": ["cubs", "cowser", "story", "other"],
   "2026-09-01": ["williams", "slugfest", "morales", "other"],
+  "2026-09-02": ["acuna", "cease", "guerrero", "other"],
 };
 
 const payload = await res.json();
