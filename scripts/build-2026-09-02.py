@@ -15,9 +15,9 @@ ISSUE_URL = f"https://getscorebook.com/{ISSUE_DATE}"
 BEEHIIV_FORM = "9c7dfc79-2b79-46fd-ae61-3320bbbebe82"
 
 DEK = (
-    "Ronald Acuña Jr. became the fastest to 200 homers and 200 steals. "
-    "Dylan Cease and Toronto shut out Cleveland 11-0. "
-    "Detroit scored five in the 12th. Athletics hit five home runs in Arlington."
+    "Acuña becomes fastest to 200/200. "
+    "Cease and Toronto blank Cleveland 11–0. "
+    "Mets pound the Rays. Cardinals take the Dodgers in 10."
 )
 
 MLB_CDN = "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/02"
@@ -26,7 +26,11 @@ CLIPS = {
     "acuna": {
         "video": f"{MLB_CDN}/38670fb6-7db498a7-a8d2413a-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
         "slug": "ronald-acuna-jr-hits-his-200th-career-homer-in-win",
-        "cap": "Ronald Acuña Jr.: 200th career homer, 200th steal club. Fastest ever. Braves 9, Nationals 0.",
+        "cap": (
+            "Ronald Acuña Jr.: 200th career homer in the 7th off Max Kranick — fastest ever to 200 HR and 200 SB "
+            "(904 games; Soriano needed 929). Three-run shot, 379 feet to left-center, his 14th of 2026. "
+            "Stole second in the 6th before Murphy's three-run homer. Braves 9, Nationals 0."
+        ),
     },
     "cease": {
         "video": f"{MLB_CDN}/5944c3d6-13578d38-1896e60b-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
@@ -160,15 +164,15 @@ UPCOMING = [
     ("SFG", "PIT", "Blade Tidwell vs. Lake Bachar", "12:35 PM ET", "2026-09-03T16:35:00Z", ""),
     ("TOR", "CLE", "José Soriano vs. Tanner Bibee", "1:10 PM ET", "2026-09-03T17:10:00Z", ""),
     ("CWS", "HOU", "Luis Castillo vs. Hunter Brown", "2:10 PM ET", "2026-09-03T18:10:00Z", ""),
-    ("BOS", "BAL", "Jake Bennett vs. Brandon Young", "7:15 PM ET", "2026-09-03T23:15:00Z", "FOX"),
-    ("MIL", "CHC", "Logan Henderson vs. Kevin Gausman", "7:15 PM ET", "2026-09-03T23:15:00Z", "FOX"),
+    ("BOS", "BAL", "Jake Bennett vs. Brandon Young", "7:15 PM ET", "2026-09-03T23:15:00Z", ""),
+    ("MIL", "CHC", "Logan Henderson vs. Kevin Gausman", "7:15 PM ET", "2026-09-03T23:15:00Z", ""),
     ("MIA", "KCR", "Sandy Alcantara vs. Michael Wacha", "7:40 PM ET", "2026-09-03T23:40:00Z", ""),
-    ("TBR", "TEX", "Shane McClanahan vs. Cal Quantrill", "8:05 PM ET", "2026-09-04T00:05:00Z", ""),
-    ("ATH", "SEA", "Jack Perkins vs. Kade Anderson", "9:40 PM ET", "2026-09-04T01:40:00Z", ""),
-    ("STL", "LAD", "Quinn Mathews vs. Tarik Skubal", "10:10 PM ET", "2026-09-04T02:10:00Z", ""),
 ]
 
-OFF_TONIGHT = ["SDP", "CIN", "ATL", "WSN", "COL", "PHI", "ARI", "NYM", "DET", "MIN", "NYY", "LAA"]
+OFF_TONIGHT = [
+    "SDP", "CIN", "ATL", "WSN", "COL", "PHI", "ARI", "NYM", "DET", "MIN",
+    "NYY", "LAA", "TBR", "TEX", "ATH", "SEA", "STL", "LAD",
+]
 
 TEAM_SUMMARIES = {
     "ATL": "Your Braves: Ronald Acuña Jr. hit his 200th homer and joined the 200-200 club. Shut out Washington 9-0.",
