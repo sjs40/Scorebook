@@ -48,6 +48,9 @@ const labels = {
   acuna: "Acuña 200/200 milestone",
   cease: "Dylan Cease shutout",
   guerrero: "Guerrero five RBIs",
+  rutschman: "Rutschman two homers in Baltimore return",
+  quantrill: "Quantrill seven scoreless",
+  jensen: "Jensen near-cycle",
   other: "Something else",
 };
 
@@ -56,6 +59,7 @@ const nomineeOrder = {
   "2026-08-31": ["cubs", "cowser", "story", "other"],
   "2026-09-01": ["williams", "slugfest", "morales", "other"],
   "2026-09-02": ["acuna", "cease", "guerrero", "other"],
+  "2026-09-03": ["rutschman", "quantrill", "jensen", "other"],
 };
 
 const payload = await res.json();
