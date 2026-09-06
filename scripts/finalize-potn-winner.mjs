@@ -54,6 +54,9 @@ const labels = {
   rocchio: "Rocchio grand slam and walk-off homer",
   sale: "Sale outduels Sánchez",
   campusano: "Campusano walk-off in the 10th",
+  devers: "Devers and Koss each homer twice",
+  wheeler: "Wheeler and Schwarber cut NL East lead",
+  aranda: "Aranda walk-off in the 10th",
   other: "Something else",
 };
 
@@ -64,6 +67,7 @@ const nomineeOrder = {
   "2026-09-02": ["acuna", "cease", "guerrero", "other"],
   "2026-09-03": ["rutschman", "quantrill", "jensen", "other"],
   "2026-09-04": ["rocchio", "sale", "campusano", "other"],
+  "2026-09-05": ["devers", "wheeler", "aranda", "other"],
 };
 
 const payload = await res.json();
