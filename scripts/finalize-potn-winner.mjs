@@ -57,6 +57,9 @@ const labels = {
   devers: "Devers and Koss each homer twice",
   wheeler: "Wheeler and Schwarber cut NL East lead",
   aranda: "Aranda walk-off in the 10th",
+  burger: "Burger's two homers",
+  acuna: "Acuña ties it on 1,000th hit",
+  marlins: "Marlins' five-run fifth",
   other: "Something else",
 };
 
@@ -68,6 +71,7 @@ const nomineeOrder = {
   "2026-09-03": ["rutschman", "quantrill", "jensen", "other"],
   "2026-09-04": ["rocchio", "sale", "campusano", "other"],
   "2026-09-05": ["devers", "wheeler", "aranda", "other"],
+  "2026-09-06": ["burger", "acuna", "marlins", "other"],
 };
 
 const payload = await res.json();
