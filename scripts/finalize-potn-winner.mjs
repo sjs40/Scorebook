@@ -60,6 +60,9 @@ const labels = {
   burger: "Burger's two homers",
   acuna: "Acuña ties it on 1,000th hit",
   marlins: "Marlins' five-run fifth",
+  luzardo: "Luzardo's shutout",
+  mayo: "Mayo's two homers",
+  dbacks: "D-backs' five-run 10th",
   other: "Something else",
 };
 
@@ -72,6 +75,7 @@ const nomineeOrder = {
   "2026-09-04": ["rocchio", "sale", "campusano", "other"],
   "2026-09-05": ["devers", "wheeler", "aranda", "other"],
   "2026-09-06": ["burger", "acuna", "marlins", "other"],
+  "2026-09-07": ["luzardo", "mayo", "dbacks", "other"],
 };
 
 const payload = await res.json();
