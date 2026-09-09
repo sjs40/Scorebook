@@ -66,6 +66,9 @@ const labels = {
   detmers: "Detmers' nine Ks",
   ramos: "Ramos's three-run homer",
   pirates: "Pirates' five-run first",
+  schlittler: "Schlittler's 10 Ks",
+  caminero: "Caminero's 455-foot homer",
+  chourio: "Chourio's tying homer and Lara walk-off",
   other: "Something else",
 };
 
@@ -79,7 +82,7 @@ const nomineeOrder = {
   "2026-09-05": ["devers", "wheeler", "aranda", "other"],
   "2026-09-06": ["burger", "acuna", "marlins", "other"],
   "2026-09-07": ["luzardo", "mayo", "dbacks", "other"],
-  "2026-09-08": ["detmers", "ramos", "pirates", "other"],
+  "2026-09-08": ["schlittler", "caminero", "chourio", "other"],
 };
 
 const payload = await res.json();
