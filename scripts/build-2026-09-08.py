@@ -17,80 +17,81 @@ ISSUE_URL = f"https://getscorebook.com/{ISSUE_DATE}"
 BEEHIIV_FORM = "9c7dfc79-2b79-46fd-ae61-3320bbbebe82"
 
 DEK = (
-    "Detmers fans nine and Neto goes 4-for-5 in the Angels' 6–1 win. "
-    "Ramos homers in the eighth as Yankees beat Colorado 5–3. "
-    "Pirates score five in the first, Chandler beats Chicago 9–3. "
-    "Guardians rally for nine at Baltimore."
+    "Schlittler K's 10 as Judge returns and the Yanks lock a 34th straight winning season. "
+    "Caminero's 455-footer grabs the AL HR lead in a Rays rout. "
+    "Chourio's ninth-inning bomb and Lara's 10th-inning knock keep Milwaukee nine clear. "
+    "Astros hang on in Philly as Hader freezes Schwarber with the tying run aboard."
 )
 
 MLB_CDN = "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/08"
 
 CLIPS = {
-    "detmers": {
-        "video": f"{MLB_CDN}/c64fb778-2f56d003-a572d4b3-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
-        "slug": "reid-detmers-fans-nine-against-the-red-sox",
+    "schlittler": {
+        "video": f"{MLB_CDN}/5a3e0b56-ea80ad6d-987336c6-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
+        "slug": "cam-schlittler-strikes-out-10-over-seven",
         "cap": (
-            "Reid Detmers: nine strikeouts, one hit over six innings. "
-            "Angels 6, Red Sox 1 — Zach Neto went 4-for-5 with a two-run homer."
+            "Cam Schlittler: seven innings, three hits, one run, 10 strikeouts. "
+            "Yankees 5, Rockies 3 — Aaron Judge went 0-for-3 in his return; "
+            "New York clinched its 34th straight winning season."
         ),
     },
-    "ramos": {
-        "video": f"{MLB_CDN}/e66d36c1-ef0ca201-8e1dbd8e-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
-        "slug": "heliot-ramos-homers-11-on-a-fly-ball-to-center-field-ben-rice-scores-cody",
+    "caminero": {
+        "video": f"{MLB_CDN}/93fc3b49-27d4df33-c60b0c4e-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
+        "slug": "junior-caminero-s-455-foot-110-2-mph-home-run",
         "cap": (
-            "Heliot Ramos: three-run homer in the eighth. "
-            "Yankees 5, Rockies 3 — Cam Schlittler struck out 10 over seven."
+            "Junior Caminero: 455-foot homer, his 39th — alone for the AL lead. "
+            "Rays 7, Braves 1 — Tampa Bay hit four home runs."
         ),
     },
-    "pirates": {
-        "video": f"{MLB_CDN}/fe32e78f-5aa2d31e-97216d6d-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
-        "slug": "five-run-inning-lifts-pirates-to-9-3-win",
+    "chourio": {
+        "video": f"{MLB_CDN}/df1d4482-20feb295-ce38894a-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
+        "slug": "jackson-chourio-homers-22-on-a-fly-ball-to-left-field-christian-yelich-sc",
         "cap": (
-            "Bubba Chandler went six innings; Pittsburgh had 18 hits. "
-            "Pirates 9, White Sox 3 — five runs in the first inning."
+            "Jackson Chourio tied it with a ninth-inning homer; Luis Lara walked it off in the 10th. "
+            "Brewers 4, Cubs 3 — Chourio went 4-for-5."
         ),
     },
-    "siri": {
-        "video": f"{MLB_CDN}/420e000c-d44537af-76fceb53-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
-        "slug": "reid-detmers-in-play-out-s-to-wilyer-abreu-lhcuie",
+    "edlc": {
+        "video": f"{MLB_CDN}/8f98260c-29029482-1b580cf7-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
+        "slug": "elly-de-la-cruz-smashes-444-foot-home-run",
         "cap": (
-            "Jose Siri stumbled but held on for the catch in center at Fenway Park. "
+            "Elly De La Cruz: 444-foot two-run homer at Dodger Stadium. "
             "That's baseball."
         ),
     },
-    "pirates_first": {
-        "video": f"{MLB_CDN}/5550ac78-6b6996ac-d0a86797-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
-        "slug": "pirates-bat-around-for-five-run-1st-inning",
+    "marlins_sixth": {
+        "video": f"{MLB_CDN}/8190b749-4f6613f3-6cc474ed-csvm-diamondgcp-asset_1280x720_59_4000K.mp4",
+        "slug": "marlins-bring-across-four-runs-in-the-6th-inning",
         "cap": (
-            "Five runs in the first — Pittsburgh sent nine batters to the plate "
-            "and had four hits in the frame."
+            "Four runs in the bottom of the sixth — five straight hits after Sean Manaea "
+            "had retired the first 15 Marlins he faced."
         ),
     },
 }
 
 PITCHERS = [
+    ("Cam Schlittler", "NYY", 77, "7.0", 3, 1, 0, 10, "COL"),
     ("Reid Detmers", "LAA", 68, "6.0", 1, 0, 1, 9, "BOS"),
-    ("Cam Schlittler", "NYY", 64, "7.0", 3, 1, 0, 10, "COL"),
+    ("Tarik Skubal", "LAD", 49, "7.1", 4, 2, 2, 5, "CIN"),
     ("Bubba Chandler", "PIT", 53, "6.0", 4, 2, 0, 8, "CHW"),
-    ("Jacob Misiorowski", "MIL", 53, "6.1", 4, 1, 2, 9, "CHC"),
 ]
 
 HITTERS = [
-    ("Zach Neto", "LAA", 7, 5, 4, 2, 1, 2, 0),
-    ("Jackson Chourio", "MIL", 7, 5, 4, 2, 1, 2, 0),
-    ("Tim Tawa", "ARI", 6, 5, 3, 1, 1, 2, 0),
-    ("Daulton Varsho", "HOU", 6, 5, 3, 2, 1, 1, 0),
+    ("Zach Neto", "LAA", 8, 5, 4, 2, 1, 2, 0),
+    ("Jackson Chourio", "MIL", 8, 5, 4, 2, 1, 2, 0),
     ("Rafael Flores Jr.", "PIT", 6, 5, 3, 1, 1, 1, 0),
+    ("Daulton Varsho", "HOU", 6, 5, 3, 2, 1, 1, 0),
     ("Danny Jansen", "TEX", 5, 4, 2, 1, 1, 4, 0),
     ("Christian Walker", "HOU", 5, 3, 2, 1, 1, 3, 0),
     ("Juan Soto", "NYM", 5, 4, 2, 2, 1, 3, 0),
+    ("Yandy Díaz", "TBR", 5, 5, 2, 2, 1, 2, 0),
 ]
 
 # away, home, away_score, home_score, away_innings, home_innings, away_h, away_e, home_h, home_e, note
 GAMES = [
     ("CLE", "BAL", 9, 5, [1, 4, 1, 0, 0, 0, 3, 0, 0], [0, 0, 0, 1, 4, 0, 0, 0, 0], 12, 0, 6, 1, "W Tim Herrin · L Brandon Young"),
     ("MIN", "DET", 3, 2, [1, 0, 0, 0, 0, 2, 0, 0, 0], [0, 0, 0, 0, 2, 0, 0, 0, 0], 5, 1, 5, 0, "W Dean Kremer · L Drew Anderson · S Yoendrys Gómez"),
-    ("HOU", "PHI", 6, 5, [0, 4, 0, 1, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 3, 1, 0, 1], 11, 0, 10, 0, "W Hayden Wesneski · L Andrew Painter · S Josh Hader"),
+    ("HOU", "PHI", 6, 5, [0, 4, 0, 1, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 3, 1, 0, 1], 11, 0, 10, 0, "W Hayden Wesneski · L Andrew Painter · S Josh Hader (24)"),
     ("NYM", "MIA", 7, 5, [2, 3, 1, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 4, 0, 0, 1], 8, 2, 10, 0, "W Sean Manaea · L Sandy Alcantara · S Kodai Senga"),
     ("LAA", "BOS", 6, 1, [0, 1, 2, 0, 1, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 1, 0, 0], 15, 0, 4, 0, "W Reid Detmers · L Patrick Sandoval"),
     ("COL", "NYY", 3, 5, [0, 0, 1, 0, 0, 0, 0, 0, 2], [1, 0, 0, 0, 1, 0, 0, 3, 0], 4, 2, 8, 0, "W Cam Schlittler · L Gabriel Hughes · S David Bednar"),
@@ -177,7 +178,7 @@ UPCOMING = [
     ("NYM", "MIA", "Robert Stock vs. Janson Junk", "6:40 PM ET", "2026-09-09T22:40:00Z", ""),
     ("LAA", "BOS", "Ryan Johnson vs. Jake Bennett", "6:45 PM ET", "2026-09-09T22:45:00Z", ""),
     ("COL", "NYY", "Tomoyuki Sugano vs. Will Warren", "7:05 PM ET", "2026-09-09T23:05:00Z", ""),
-    ("TBR", "ATL", "Griffin Jax vs. TBD", "7:15 PM ET", "2026-09-09T23:15:00Z", ""),
+    ("TBR", "ATL", "Griffin Jax vs. Johan López", "7:15 PM ET", "2026-09-09T23:15:00Z", ""),
     ("ARI", "KCR", "Zac Gallen vs. Daniel Lynch IV", "7:40 PM ET", "2026-09-09T23:40:00Z", ""),
     ("PIT", "CHW", "Lake Bachar vs. Davis Martin", "7:40 PM ET", "2026-09-09T23:40:00Z", ""),
     ("CHC", "MIL", "Kevin Gausman vs. Logan Henderson", "7:40 PM ET", "2026-09-09T23:40:00Z", ""),
@@ -187,50 +188,50 @@ UPCOMING = [
 OFF_TONIGHT: list[str] = []
 
 TEAM_SUMMARIES = {
-    "CHC": "Your Cubs: Lost 3-4 in 10 at Milwaukee; Chourio went 4-for-5. At Milwaukee tonight.",
-    "MIA": "Your Marlins: Lost 7-5 to the Mets; Senga saved it. Host New York tonight.",
-    "SFG": "Your Giants: Roupp and Eldridge beat St. Louis 2-1. Host the Cardinals tonight.",
-    "NYM": "Your Mets: Soto homered in a 7-5 win at Miami. At Miami tonight.",
-    "ATL": "Your Braves: Lost 1-7 to Tampa Bay. Host the Rays tonight.",
-    "PHI": "Your Phillies: Lost 5-6 to Houston despite a Walker three-run homer. Host the Astros tonight.",
+    "CHC": "Your Cubs: Chourio's ninth-inning homer tied it; Lara walked off in the 10th. At Milwaukee tonight.",
+    "MIA": "Your Marlins: Manaea retired the first 15, then Miami scored four in the sixth. Host New York tonight.",
+    "SFG": "Your Giants: Roupp shut out St. Louis on two hits over six. Host the Cardinals tonight.",
+    "NYM": "Your Mets: Manaea retired the first 15; Soto homered in a 7-5 win at Miami. At Miami tonight.",
+    "ATL": "Your Braves: Caminero's 455-foot homer led a Rays rout 7-1. Host Tampa Bay tonight.",
+    "PHI": "Your Phillies: Walker homered but Hader stranded the tying run in a 5-6 loss to Houston. Host the Astros tonight.",
     "DET": "Your Tigers: Lost 2-3 to Minnesota. Host the Twins tonight.",
-    "CLE": "Your Guardians: Bazzana homered; beat Baltimore 9-5. At Baltimore tonight.",
+    "CLE": "Your Guardians: Bazzana's three-run homer fueled a 9-5 win at Baltimore. At Baltimore tonight.",
     "LAA": "Your Angels: Detmers fanned nine; Neto went 4-for-5 in a 6-1 win at Boston. At Boston tonight.",
-    "PIT": "Your Pirates: Chandler and an 18-hit attack beat Chicago 9-3. At Chicago tonight.",
-    "MIL": "Your Brewers: Walk-off in the 10th over Chicago 4-3. Host the Cubs tonight.",
-    "CIN": "Your Reds: Lost 2-3 at Dodger Stadium. At Los Angeles tonight.",
+    "PIT": "Your Pirates: Chandler and 18 hits beat Chicago 9-3. At Chicago tonight.",
+    "MIL": "Your Brewers: Chourio tied it in the ninth; Lara walked off in the 10th. Host the Cubs tonight.",
+    "CIN": "Your Reds: De La Cruz homered but lost 2-3 at Dodger Stadium. At Los Angeles tonight.",
     "BOS": "Your Red Sox: Lost 1-6 to the Angels. Host the Angels tonight.",
     "BAL": "Your Orioles: Lost 5-9 to Cleveland. Host the Guardians tonight.",
-    "TBR": "Your Rays: Four homers in a 7-1 win at Atlanta. At Atlanta tonight.",
-    "TEX": "Your Rangers: Jansen drove in four in a 10-5 win at Seattle. At Seattle tonight.",
-    "MIN": "Your Twins: Kremer won 3-2 at Detroit. At Detroit tonight.",
+    "TBR": "Your Rays: Caminero's 39th homer — AL leader — in a 7-1 win at Atlanta. At Atlanta tonight.",
+    "TEX": "Your Rangers: Jansen drove in four; Montes hit a 474-foot homer in a 10-5 win at Seattle. At Seattle tonight.",
+    "MIN": "Your Twins: Clemens homered; Kremer won 3-2 at Detroit. At Detroit tonight.",
     "CHW": "Your White Sox: Lost 3-9 to Pittsburgh. Host the Pirates tonight.",
-    "TOR": "Your Blue Jays: Soriano won 4-2 at Oakland. At Oakland tonight.",
+    "TOR": "Your Blue Jays: Okamoto homered; Soriano won 4-2 at Oakland. At Oakland tonight.",
     "KCR": "Your Royals: Lost 3-5 in 11 to Arizona. Host the D-backs tonight.",
     "ARI": "Your Diamondbacks: Beat Kansas City 5-3 in 11. At Kansas City tonight.",
-    "HOU": "Your Astros: Walker homered in a 6-5 win at Philadelphia. At Philadelphia tonight.",
-    "NYY": "Your Yankees: Ramos's three-run eighth beat Colorado 5-3. Host the Rockies tonight.",
+    "HOU": "Your Astros: Walker, Smith, and Varsho homered in a 6-5 win at Philadelphia. At Philadelphia tonight.",
+    "NYY": "Your Yankees: Schlittler fanned 10; Judge returned; 34th straight winning season clinched. Host Colorado tonight.",
     "SDP": "Your Padres: Four-run eighth beat Washington 5-4. Host the Nationals tonight.",
     "STL": "Your Cardinals: Lost 1-2 at San Francisco. At San Francisco tonight.",
     "COL": "Your Rockies: Lost 3-5 at New York. At New York tonight.",
     "WSN": "Your Nationals: Lost 4-5 at San Diego. At San Diego tonight.",
-    "LAD": "Your Dodgers: Skubal won 3-2 over Cincinnati. Host the Reds tonight.",
+    "LAD": "Your Dodgers: Skubal won; sixth straight victory over Cincinnati. Host the Reds tonight.",
     "ATH": "Your Athletics: Lost 2-4 to Toronto. Host the Blue Jays tonight.",
     "SEA": "Your Mariners: Lost 5-10 to Texas. Host the Rangers tonight.",
 }
 
 RACE_AL_RECAP = (
-    "Travis Bazzana homered as Cleveland beat Baltimore 9-5. "
-    "Reid Detmers fanned nine in the Angels' 6-1 win at Boston. "
-    "Danny Jansen drove in four as Texas beat Seattle 10-5."
+    "Cam Schlittler struck out 10 as the Yankees beat Colorado and clinched a 34th straight winning season. "
+    "Junior Caminero's 455-foot homer led Tampa Bay past Atlanta 7-1. "
+    "Travis Bazzana homered as Cleveland beat Baltimore 9-5."
 )
-RACE_AL_SINCE = "Cleveland is 6-4 in its last ten."
+RACE_AL_SINCE = "The Yankees are 6-4 in their last ten."
 RACE_NL_RECAP = (
-    "Tampa Bay hit four homers in a 7-1 win at Atlanta. "
-    "Pittsburgh scored five in the first and beat Chicago 9-3 on 18 hits. "
-    "Arizona beat Kansas City 5-3 in 11."
+    "Jackson Chourio tied it in the ninth and Luis Lara walked off in Milwaukee's 4-3 win over Chicago. "
+    "Josh Hader stranded the tying run as Houston held on 6-5 at Philadelphia. "
+    "Sean Manaea retired the first 15 before Miami rallied in a 7-5 loss to the Mets."
 )
-RACE_NL_SINCE = "Arizona is 6-4 in its last ten."
+RACE_NL_SINCE = "Milwaukee is 5-5 in its last ten."
 
 
 def extract_style_block() -> str:
@@ -493,12 +494,12 @@ def build_html() -> str:
 
   <section class="shareable" id="must-watch">
   <h2>Must watch</h2>
-{clip_html("detmers")}
-  <p class="cap">{CLIPS["detmers"]["cap"]}</p>
-{clip_html("ramos")}
-  <p class="cap">{CLIPS["ramos"]["cap"]}</p>
-{clip_html("pirates")}
-  <p class="cap">{CLIPS["pirates"]["cap"]}</p>
+{clip_html("schlittler")}
+  <p class="cap">{CLIPS["schlittler"]["cap"]}</p>
+{clip_html("caminero")}
+  <p class="cap">{CLIPS["caminero"]["cap"]}</p>
+{clip_html("chourio")}
+  <p class="cap">{CLIPS["chourio"]["cap"]}</p>
 
   </section>
 
@@ -507,9 +508,9 @@ def build_html() -> str:
   <p class="subn">The three Must watch clips, or something else.</p>
   <div class="poll" id="potn" data-potn-issue="{ISSUE_DATE}">
     <form id="potn-form">
-      <label><input type="radio" name="play" value="detmers" required> Detmers' nine Ks</label>
-      <label><input type="radio" name="play" value="ramos"> Ramos's three-run homer</label>
-      <label><input type="radio" name="play" value="pirates"> Pirates' five-run first</label>
+      <label><input type="radio" name="play" value="schlittler" required> Schlittler's 10 Ks</label>
+      <label><input type="radio" name="play" value="caminero"> Caminero's 455-foot homer</label>
+      <label><input type="radio" name="play" value="chourio"> Chourio's tying homer and Lara walk-off</label>
       <label><input type="radio" name="play" value="other"> Something else</label>
       <button type="submit">Vote</button>
     </form>
@@ -528,16 +529,16 @@ def build_html() -> str:
 
   <section class="shareable" id="thats-baseball">
   <h2>That's baseball</h2>
-{clip_html("siri")}
-  <p class="cap">{CLIPS["siri"]["cap"]}</p>
+{clip_html("edlc")}
+  <p class="cap">{CLIPS["edlc"]["cap"]}</p>
 
   </section>
 
   <section class="shareable" id="one-inning">
   <h2>One inning</h2>
-  <p>Top of the first at Rate Field. Pittsburgh sent nine batters to the plate and scored five runs on four hits — a two-run homer, an RBI single, and a two-run double among the damage. Chicago answered with one in the fifth but fell 9-3.</p>
-{clip_html("pirates_first")}
-  <p class="cap">{CLIPS["pirates_first"]["cap"]}</p>
+  <p>Bottom of the sixth at loanDepot park. Sean Manaea had retired the first 15 Marlins he faced — then Miami sent five straight batters who all reached and scored four runs on four hits. The Mets still won 7-5.</p>
+{clip_html("marlins_sixth")}
+  <p class="cap">{CLIPS["marlins_sixth"]["cap"]}</p>
 
   </section>
 
