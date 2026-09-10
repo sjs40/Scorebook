@@ -102,6 +102,7 @@ GAMES = [
     ("ARI", "KCR", 2, 5, [0, 0, 0, 1, 1, 0, 0, 0, 0], [0, 1, 1, 0, 3, 0, 0, 0, 0], 9, 1, 7, 0, "W Daniel Lynch IV · L Michael Soroka · S Nate Pearson"),
     ("PIT", "CHW", 4, 2, [0, 0, 0, 0, 1, 0, 3, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 0], 10, 0, 8, 0, "W Brandon Eisert · L Davis Martin · S Mason Montgomery"),
     ("CHC", "MIL", 6, 8, [0, 0, 0, 1, 0, 0, 0, 0, 5], [3, 3, 1, 0, 0, 1, 0, 0, 0], 5, 2, 9, 1, "W Logan Henderson · L Kevin Gausman"),
+    ("CIN", "LAD", 1, 14, [0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 1, 2, 6, 0, 2, 2, 1, 0], 6, 0, 14, 0, "W Yoshinobu Yamamoto · L Rhett Lowder"),
 ]
 
 STANDINGS = {
@@ -173,7 +174,7 @@ UPCOMING = [
     ("PIT", "CHW", "Jared Jones vs. Hagen Smith", "7:40 PM ET", "2026-09-10T23:40:00Z", ""),
 ]
 
-OFF_TONIGHT = ["LAD", "CIN"]
+OFF_TONIGHT: list[str] = []
 
 TEAM_SUMMARIES = {
     "CHC": "Your Cubs: Gausman took the loss as Milwaukee hit three homers in an 8–6 defeat. Off tonight.",
@@ -187,7 +188,7 @@ TEAM_SUMMARIES = {
     "LAA": "Your Angels: Johnson won at Fenway; Guzman and Neto homered in a 6–4 win. Off tonight.",
     "PIT": "Your Pirates: Eisert and Montgomery closed out a 4–2 win at Chicago. At Chicago tonight.",
     "MIL": "Your Brewers: Yelich, Contreras, and Chourio homered in an 8–6 win over the Cubs. Off tonight.",
-    "CIN": "Your Reds: Off tonight.",
+    "CIN": "Your Reds: Lost 1–14 at Dodger Stadium. Off tonight.",
     "BOS": "Your Red Sox: Lost 4–6 to the Angels. Off tonight.",
     "BAL": "Your Orioles: Eight runs in the third beat Cleveland 9–5. Off tonight.",
     "TBR": "Your Rays: Mesa Jr. homered in a 7–2 win at Atlanta; AL East lead is four. At Atlanta tonight.",
@@ -203,7 +204,7 @@ TEAM_SUMMARIES = {
     "STL": "Your Cardinals: Six runs in the eighth weren't enough in a 6–7 loss at San Francisco. Off tonight.",
     "COL": "Your Rockies: Lost 1–6 at New York. At New York tonight.",
     "WSN": "Your Nationals: Lost 2–9 at San Diego; seventh straight defeat. Off tonight.",
-    "LAD": "Your Dodgers: Off tonight.",
+    "LAD": "Your Dodgers: Yamamoto fanned 10 in seven innings; beat Cincinnati 14–1. Off tonight.",
     "ATH": "Your Athletics: Blewett won 2–0 over Toronto. Off tonight.",
     "SEA": "Your Mariners: Anderson beat Texas 3–2. Host the Rangers tonight.",
 }
@@ -217,7 +218,7 @@ RACE_AL_SINCE = "The Rays are 6–4 in their last ten."
 RACE_NL_RECAP = (
     "The Mets outlasted Miami 15–14 — Lindor's 3-run homer keyed a six-run seventh. "
     "Milwaukee hit three homers to beat Chicago 8–6; the Brewers' magic number is five. "
-    "Jackson Merrill drove in six as San Diego routed Washington 9–2."
+    "Yoshinobu Yamamoto fanned 10 as the Dodgers beat Cincinnati 14–1."
 )
 RACE_NL_SINCE = "Milwaukee is 6–4 in its last ten."
 
